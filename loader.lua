@@ -99,6 +99,6 @@ end)
 
 
 
-client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDYrQ.qAgsKQjeIUNOnfz3OyxG4pNRvB0")
+client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
 
