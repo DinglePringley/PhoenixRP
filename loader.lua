@@ -22,7 +22,7 @@ end)
 client:on('ready', function()
     while( true )
     do
-        client:setGame("with the APC Discord")
+        client:setGame("Dan Jones for COMM")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
     end
@@ -137,7 +137,15 @@ end
 
 commands[prefix.."credit"] = function(user, msg)
 	print("Anthony stinks")
-	msg.channel:send("Credit: Dan Jones, Curly Curtis")
+   		msg.channel:send{
+			 embed = {
+            title = "Credit",
+            fields = {
+                {name = "Tester", value = "Dan Jones, Curly Curtis"}
+            },
+            color = discordia.Color.fromRGB(205, 0, 0).value,
+        }
+    }    
 end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
