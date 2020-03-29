@@ -44,9 +44,11 @@ client:on('messageCreate', function(message)
 end)
 
 client:on('memberJoin', function(member)
-        member:addRole("680055508014858287")
-end)
+    member:addRole("683615982266482709")
+    member:addrole("683094358186000391")
+    member:setNickname("PCSO "..msg.member.username)
 
+end)
 
     commands[prefix.."kick"] = function(user, msg)
     print("Running kick function")
