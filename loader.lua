@@ -131,7 +131,8 @@ client:on('memberUpdate', function(member)
     end
 end)
 
-commands[prefix.."Credit"] = function(user,msg)
+commands[prefix.."credit"] = function(user, msg)
+	print("Anthony stinks")
 	msg.channel:send("Credit: Dan Jones, Curly Curtis")
 end
 
