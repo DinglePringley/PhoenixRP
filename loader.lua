@@ -89,7 +89,7 @@ commands[prefix.."meeting"] = function(msg, user)
     msg.channel:send("You do not have the right permissions to do this request sir!") 
     return 
     end
-    if os.date("%A") ~= "Saturday" then
+    if os.date("%A") ~= "Sunday" then
         msg.channel:send("Command must be ran on a saturday sir!") 
         return
     end
