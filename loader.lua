@@ -22,8 +22,8 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         guild = client:getGuild("679841824130859086")
-        client._apcGuild = client:getGuild(apcGuild)
-     	client._specificChannel = client._apcGuild:getChannel("554421147328839690")
+        --client._apcGuild = client:getGuild(apcGuild)
+     	--client._specificChannel = client._apcGuild:getChannel("554421147328839690")
     end
 end)
 
@@ -42,12 +42,12 @@ client:on('messageCreate', function(message)
     end
 end)
 
-client:on('memberJoin', function(member)
-	local guild = member.guild
-	if guild == client._apcGuild then
-		member:addRole("683094356831371267")
-	end
-end)
+--client:on('memberJoin', function(member)
+--	local guild = member.guild
+--	if guild == client._apcGuild then
+--		member:addRole("683094356831371267")
+--	end
+--end)
 
 
 
