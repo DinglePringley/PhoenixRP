@@ -17,12 +17,13 @@ client:on('ready', function()
     print('Logged in as '.. client.user.username)
 end)
 
---client:on('ready', function()
---    while( true )
---    do
---        client:setGame("with the APC Discord")
---        guild = client:getGuild("679841824130859086")
---end)
+client:on('ready', function()
+    while( true )
+    do
+        client:setGame("with the APC Discord")
+        guild = client:getGuild("679841824130859086")
+    end
+end)
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
@@ -96,7 +97,7 @@ commands[prefix.."meeting"] = function(user, msg)
 	end
 end)
 
-
+commands
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
