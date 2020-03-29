@@ -22,7 +22,7 @@ end)
 client:on('ready', function()
     while( true )
     do
-        client:setGame("Dan Jones for COMM")
+        client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
     end
