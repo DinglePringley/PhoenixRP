@@ -94,7 +94,7 @@ commands[prefix.."meeting"] = function(user, msg)
        	 return
     	end
     	msg.channel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
-end)
+end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
