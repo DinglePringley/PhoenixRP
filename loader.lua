@@ -413,60 +413,60 @@ commands[prefix.."sigel"] = function(user,msg)
     }
         end
 
-commands[prefix.."echo"] = function(msg, arg)
-    if not msg then return end
-    if not msg.member then return end
-    if not adminPermissions(msg.member) then
-        msg.channel:send("You need specific permissions to use this command, sir.")
-        return
-    end
-    if not arg then
-        msg.channel:send("Please give a message for me to echo, sir.")
-        return
-    end
-
-    local image, title, message = string.match(arg, '(.*) | (.*) | (.*)')
-    if not image then image = "" title, message = string.match(arg, '(.*) | (.*)') end
-    if not title then title = "" message = arg end
-
-    print(image, title, message)
-
-    msg.channel:send {
-        embed = {
-            title = title,
-            thumbnail = {url = image},
-            description = message,
-            color = discordia.Color.fromRGB(55, 55, 200).value
-        }
-    }
-end
-
-
-local words = {}
-words[1] = "Fact"
-words[2] = "Provide"
-words[3] = "Pear"
-words[4] = "Hellish"
-words[5] = "Sharp"
-words[6] = "Water"
-words[7] = "Uptight"
-words[8] = "Blue"
-words[9] = "Alike"
-words[10] = "Sugar"
-words[11] = "Car"
-words[12] = "juvenile"
-
-local activeWord = nil
-
-commands[prefix.."game"] = function(user,msg)
-    if activeWord then msg.channel:send("Sorry, a game is already active") return end
-    print("Game do be working")
-    activeWord = words[math.random(#words)]
-    msg.channel:send("Welcome to hangman. The goal is to guess the word to save the man from being hung. Good luck.")
-    print(string.len(activeWord))
-    msg.channel:send("Your word has "..string.len(activeWord).. " letters in it.")
-    msg.channel:send("Please guess one letter at a time. The letter will display in all spots it fits in!")
-end
+--commands[prefix.."echo"] = function(msg, arg)
+--    if not msg then return end
+--    if not msg.member then return end
+--    if not adminPermissions(msg.member) then
+--        msg.channel:send("You need specific permissions to use this command, sir.")
+--        return
+--    end
+--    if not arg then
+--        msg.channel:send("Please give a message for me to echo, sir.")
+--        return
+--    end
+--
+--    local image, title, message = string.match(arg, '(.*) | (.*) | (.*)')
+--    if not image then image = "" title, message = string.match(arg, '(.*) | (.*)') end
+--    if not title then title = "" message = arg end
+--
+--    print(image, title, message)
+--
+--    msg.channel:send {
+--        embed = {
+--            title = title,
+--            thumbnail = {url = image},
+--            description = message,
+--            color = discordia.Color.fromRGB(55, 55, 200).value
+--        }
+--    }
+--end
+--
+--
+--local words = {}
+--words[1] = "Fact"
+--words[2] = "Provide"
+--words[3] = "Pear"
+--words[4] = "Hellish"
+--words[5] = "Sharp"
+--words[6] = "Water"
+--words[7] = "Uptight"
+--words[8] = "Blue"
+--words[9] = "Alike"
+--words[10] = "Sugar"
+--words[11] = "Car"
+--words[12] = "juvenile"
+--
+--local activeWord = nil
+--
+--commands[prefix.."game"] = function(user,msg)
+--    if activeWord then msg.channel:send("Sorry, a game is already active") return end
+--    print("Game do be working")
+--    activeWord = words[math.random(#words)]
+--    msg.channel:send("Welcome to hangman. The goal is to guess the word to save the man from being hung. Good luck.")
+--    print(string.len(activeWord))
+--    msg.channel:send("Your word has "..string.len(activeWord).. " letters in it.")
+--    msg.channel:send("Please guess one letter at a time. The letter will display in all spots it fits in!")
+--end
 
 client:run("Bot Njc5ODQyNjMzNDUxMTc1OTk0.Xk3O_w.QmdS7Gg2AaF8XJ7ZGz3z03N_fX4")
 
