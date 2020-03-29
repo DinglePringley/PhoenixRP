@@ -6144,3 +6144,8 @@
 2020-03-29 18:20:54 | [WARNING] | 429 - Too Many Requests : retrying after 12698 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
 2020-03-29 18:21:09 | [WARNING] | 429 - Too Many Requests : retrying after 12677 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
 2020-03-29 18:21:24 | [WARNING] | 429 - Too Many Requests : retrying after 12779 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:21:39 | [WARNING] | 429 - Too Many Requests : retrying after 12811 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:21:55 | [WARNING] | 429 - Too Many Requests : retrying after 12805 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:22:08 | [WARNING] | 429 - Too Many Requests : retrying after 14082 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:22:24 | [WARNING] | 429 - Too Many Requests : retrying after 14069 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:22:40 | [WARNING] | 429 - Too Many Requests : retrying after 12742 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
