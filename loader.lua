@@ -131,6 +131,10 @@ client:on('memberUpdate', function(member)
     end
 end)
 
+commands[prefix.."Credit"] = function(user,msg)
+	msg.channel:send("Credit: Dan Jones, Curly Curtis")
+end
+
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
 
