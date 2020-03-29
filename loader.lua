@@ -91,7 +91,7 @@ end
 
 commands[prefix.."mute"] = function(user, msg)
 	print("Mute command running")
-	if no
+end
 
 commands[prefix.."meeting"] = function(user, msg)
     print(os.date("%A"))
