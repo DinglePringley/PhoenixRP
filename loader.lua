@@ -46,7 +46,7 @@ end)
 client:on('memberJoin', function(member)
 	local guild = member.guild
 	if guild == client._policeGuild then
-		member:addRole("683094356831371267")
+		member:addRole("680055508014858287")
 	end
 end)
 
