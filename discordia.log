@@ -6058,3 +6058,89 @@
 2020-03-29 16:08:20 | [WARNING] | 429 - Too Many Requests : retrying after 12815 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
 2020-03-29 16:08:35 | [WARNING] | 429 - Too Many Requests : retrying after 12845 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
 2020-03-29 16:08:50 | [WARNING] | 429 - Too Many Requests : retrying after 12834 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:14:54 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:15:05 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:15:05 | [INFO]    | Connecting to Discord...
+2020-03-29 18:15:10 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:15:10 | [INFO]    | Connecting to Discord...
+2020-03-29 18:15:10 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:15:11 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:15:11 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:15:11 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:15:11 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:15:14 | [WARNING] | 429 - Too Many Requests : retrying after 12484 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:15:29 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:15:29 | [INFO]    | Connecting to Discord...
+2020-03-29 18:15:29 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:15:29 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:15:29 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:15:29 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:15:30 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:15:33 | [WARNING] | 429 - Too Many Requests : retrying after 12469 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:15:46 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:15:46 | [INFO]    | Connecting to Discord...
+2020-03-29 18:15:47 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:15:47 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:15:47 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:15:47 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:15:47 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:15:50 | [WARNING] | 429 - Too Many Requests : retrying after 12451 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:16:07 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:16:07 | [INFO]    | Connecting to Discord...
+2020-03-29 18:16:07 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:16:07 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:16:07 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:16:07 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:16:07 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:16:09 | [WARNING] | 429 - Too Many Requests : retrying after 8458 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:16:24 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:16:24 | [INFO]    | Connecting to Discord...
+2020-03-29 18:16:24 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:16:24 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:16:24 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:16:24 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:16:25 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:16:26 | [WARNING] | 429 - Too Many Requests : retrying after 7397 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:16:36 | [WARNING] | 429 - Too Many Requests : retrying after 12765 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:16:41 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:16:41 | [INFO]    | Connecting to Discord...
+2020-03-29 18:16:42 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:16:42 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:16:42 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:16:42 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:16:42 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:16:43 | [WARNING] | 429 - Too Many Requests : retrying after 5804 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:16:51 | [WARNING] | 429 - Too Many Requests : retrying after 12793 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:17:06 | [WARNING] | 429 - Too Many Requests : retrying after 12828 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:17:24 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:17:24 | [INFO]    | Connecting to Discord...
+2020-03-29 18:17:24 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:17:24 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:17:25 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:17:25 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:17:25 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:17:26 | [WARNING] | 429 - Too Many Requests : retrying after 7996 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:17:36 | [WARNING] | 429 - Too Many Requests : retrying after 12692 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:17:51 | [WARNING] | 429 - Too Many Requests : retrying after 12832 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:17:54 | [INFO]    | Discordia 2.8.0
+2020-03-29 18:17:54 | [INFO]    | Connecting to Discord...
+2020-03-29 18:17:55 | [INFO]    | Authenticated as Botty#7632
+2020-03-29 18:17:55 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-03-29 18:17:55 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-03-29 18:17:55 | [INFO]    | Shard 0 : Received HELLO
+2020-03-29 18:17:55 | [INFO]    | Shard 0 : Received READY
+2020-03-29 18:17:56 | [WARNING] | 429 - Too Many Requests : retrying after 8702 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:18:07 | [WARNING] | 429 - Too Many Requests : retrying after 12806 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:18:22 | [WARNING] | 429 - Too Many Requests : retrying after 12719 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:18:38 | [WARNING] | 429 - Too Many Requests : retrying after 12151 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:18:52 | [WARNING] | 429 - Too Many Requests : retrying after 12693 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:19:08 | [WARNING] | 429 - Too Many Requests : retrying after 12766 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:19:23 | [WARNING] | 429 - Too Many Requests : retrying after 12768 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:19:38 | [WARNING] | 429 - Too Many Requests : retrying after 12824 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:19:53 | [WARNING] | 429 - Too Many Requests : retrying after 12784 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:20:08 | [WARNING] | 429 - Too Many Requests : retrying after 12833 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:20:24 | [WARNING] | 429 - Too Many Requests : retrying after 12720 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:20:39 | [WARNING] | 429 - Too Many Requests : retrying after 12687 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:20:54 | [WARNING] | 429 - Too Many Requests : retrying after 12698 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:21:09 | [WARNING] | 429 - Too Many Requests : retrying after 12677 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
+2020-03-29 18:21:24 | [WARNING] | 429 - Too Many Requests : retrying after 12779 ms : PATCH https://discordapp.com/api/v7/channels/683718884708319265
