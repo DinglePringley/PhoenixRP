@@ -57,7 +57,7 @@ end)
     if msg.member:hasPermission(nil, "kickMembers") then
         print("Permission granted")
         local targets = msg.mentionedUsers
-        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to ban sir!") return end
+        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to kick sir!") return end
         for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
@@ -89,6 +89,10 @@ end
     end
 end
 
+commands[prefix.."mute"] = function(user, msg)
+	print("Mute command running")
+	if no
+
 commands[prefix.."meeting"] = function(user, msg)
     print(os.date("%A"))
 		if not msg then return end
@@ -104,32 +108,32 @@ commands[prefix.."meeting"] = function(user, msg)
     	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
 
-client:on('memberUpdate', function(member)
-    if(member:hasRole("563037544271314965")) then
-    member:setNickname("PPC "..member.username)
-    end
-    if(member:hasRole("563037467385790474")) then
-    member:setNickname("PC "..member.username)
-    end
-    if(member:hasRole("563037417628499972")) then
-    member:setNickname("SPC "..member.username)
-    end
-    if(member:hasRole("563037157292244996")) then
-    member:setNickname("SGT "..member.username)
-    end
-        if(member:hasRole("563037118083891210")) then
-    member:setNickname("INS "..member.username)
-    end
-        if(member:hasRole("563037042997592067")) then
-    member:setNickname("CI "..member.username)
-    end
-        if(member:hasRole("563036019058933780")) then
-    member:setNickname("SI "..member.username)
-    end
-        if(member:hasRole("563035952822485003")) then
-    member:setNickname("CSI "..member.username)
-    end
-end)
+--client:on('memberUpdate', function(member)
+--    if(member:hasRole("563037544271314965")) then
+--    member:setNickname("PPC "..member.username)
+--    end
+--    if(member:hasRole("563037467385790474")) then
+--    member:setNickname("PC "..member.username)
+--    end
+--    if(member:hasRole("563037417628499972")) then
+--    member:setNickname("SPC "..member.username)
+--    end
+--    if(member:hasRole("563037157292244996")) then
+--    member:setNickname("SGT "..member.username)
+--    end
+--        if(member:hasRole("563037118083891210")) then
+--    member:setNickname("INS "..member.username)
+--    end
+--        if(member:hasRole("563037042997592067")) then
+--    member:setNickname("CI "..member.username)
+--    end
+--        if(member:hasRole("563036019058933780")) then
+--    member:setNickname("SI "..member.username)
+--    end
+--        if(member:hasRole("563035952822485003")) then
+--    member:setNickname("CSI "..member.username)
+--    end
+--end)
 
 commands[prefix.."credit"] = function(user, msg)
 	print("Anthony stinks")
