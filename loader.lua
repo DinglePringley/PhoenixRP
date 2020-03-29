@@ -1,7 +1,7 @@
 
 local discordia = require('discordia')
 local olib = require("./olib.lua")
-local commands = require("./commands.lua")
+--local commands = require("./commands.lua")
 discordia.extensions()
 
 local client = discordia.Client()
