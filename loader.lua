@@ -45,9 +45,8 @@ end)
 
 client:on('memberJoin', function(member)
     member:addRole("683615982266482709")
-    member:addrole("683094358186000391")
-    member:setNickname("PCSO "..msg.member.username)
-
+    member:addRole("683094358186000391")
+    member:setNickname("PCSO "..member.username)
 end)
 
     commands[prefix.."kick"] = function(user, msg)
