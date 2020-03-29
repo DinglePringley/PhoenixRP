@@ -8,8 +8,8 @@ local client = discordia.Client()
 discordia.extensions() -- load all helpful extensions
 
 
-local policeGuild = "679841824130859086"
-local prefix = "!"
+local policeGuild = "358709912089657344"
+local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
@@ -24,7 +24,7 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
-        client._specificChannel = client._PoliceGuild:getChannel("683613710182383631")
+        client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
     end
 end)
 
@@ -44,8 +44,9 @@ client:on('messageCreate', function(message)
 end)
 
 client:on('memberJoin', function(member)
-    member:addRole("683615982266482709")
-    member:addRole("683094358186000391")
+    member:addRole("563037666283880470")
+    member:addRole("563037544271314965")
+    member:addRole("")
     member:setNickname("PCSO "..member.username)
 end)
 
@@ -92,16 +93,43 @@ commands[prefix.."meeting"] = function(user, msg)
     print(os.date("%A"))
 		if not msg then return end
 		if not msg.member then return end
-    	if not msg.member:hasRole("680055508014858287") then 
+    	if not msg.member:hasRole("361232247065673739") then 
     	msg.channel:send("You do not have the right permissions to do this request sir!") 
     	return 
     	end
-    	if os.date("%A") ~= "Sunday" then
+    	if os.date("%A") ~= "Saturday" then
        	 msg.channel:send("Command must be ran on a saturday sir!") 
        	 return
     	end
     	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
+
+client:on('memberUpdate', function(member)
+    if(member:hasRole("563037544271314965")) then
+    member:setNickname("PPC "..member.username)
+    end
+    if(member:hasRole("563037467385790474")) then
+    member:setNickname("PC "..member.username)
+    end
+    if(member:hasRole("563037417628499972")) then
+    member:setNickname("SPC "..member.username)
+    end
+    if(member:hasRole("563037157292244996")) then
+    member:setNickname("SGT "..member.username)
+    end
+        if(member:hasRole("563037118083891210")) then
+    member:setNickname("INS "..member.username)
+    end
+        if(member:hasRole("563037042997592067")) then
+    member:setNickname("CI "..member.username)
+    end
+        if(member:hasRole("563036019058933780")) then
+    member:setNickname("SI "..member.username)
+    end
+        if(member:hasRole("563035952822485003")) then
+    member:setNickname("CSI "..member.username)
+    end
+end)
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
