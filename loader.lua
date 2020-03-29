@@ -43,6 +43,12 @@ client:on('messageCreate', function(message)
     end
 end)
 
+client:on('memberJoin', function(member)
+	local guild = member.guild
+	if guild == client._policeGuild then
+		member:addRole("683094356831371267")
+	end
+end)
 
 
     commands[prefix.."kick"] = function(user, msg)
@@ -98,14 +104,6 @@ commands[prefix.."meeting"] = function(user, msg)
     	end
     	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
-
-client:on('memberJoin', function(member)
-	local guild = member.guild
-	if guild == client._policeGuild then
-		member:addRole("683094356831371267")
-	end
-end)
-
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
