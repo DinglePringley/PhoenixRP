@@ -143,7 +143,7 @@ commands[prefix.."credit"] = function(user, msg)
             fields = {
                 {name = "Tester", value = "Dan Jones, Curly Curtis"}
             },
-            color = discordia.Color.fromRGB(205, 0, 0).value,
+            color = discordia.Color.fromRGB(255, 0, 127).value,
         }
     }    
 end
