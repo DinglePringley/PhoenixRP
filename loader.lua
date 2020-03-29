@@ -7,6 +7,8 @@ discordia.extensions()
 local client = discordia.Client()
 discordia.extensions() -- load all helpful extensions
 
+
+local policeGuild = "679841824130859086"
 local prefix = "!"
 local commands = {}
 local targets = {}
@@ -21,7 +23,8 @@ client:on('ready', function()
     while( true )
     do
         client:setGame("with the APC Discord")
-        guild = client:getGuild("679841824130859086")
+        client._PoliceGuild = client:getGuild(policeGuild)
+        client._specificChannel = client._PoliceGuild:getChannel("683613710182383631")
     end
 end)
 
@@ -89,11 +92,11 @@ commands[prefix.."meeting"] = function(user, msg)
     	msg.channel:send("You do not have the right permissions to do this request sir!") 
     	return 
     	end
-    	if os.date("%A") ~= "Sunday" then
+    	if os.date("%A") ~= "Saturday" then
        	 msg.channel:send("Command must be ran on a saturday sir!") 
        	 return
     	end
-    	msg.channel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
+    	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
