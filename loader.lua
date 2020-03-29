@@ -93,7 +93,7 @@ commands[prefix.."meeting"] = function(msg, user)
         msg.channel:send("Command must be ran on a saturday sir!") 
         return
     end
-    msg.channel:send("@here Meeting is Today at 7:30PM GMT make sure you can attend!")
+    msg.channel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
 end
 
 
