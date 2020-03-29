@@ -21,6 +21,7 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         guild = client:getGuild("679841824130859086")
+        client._specificChannel = client._PoliceGuild:getChannel("554421147328839690")
     end
 end)
 
@@ -81,7 +82,7 @@ end
     end
 end
 
-commands[prefix.."meeting"] = function(msg, user)
+commands[prefix.."meeting"] = function(user, msg)
     print(os.date("%A"))
 	if not msg then return end
 	if not msg.member then return end
@@ -93,7 +94,7 @@ commands[prefix.."meeting"] = function(msg, user)
         msg.channel:send("Command must be ran on a saturday sir!") 
         return
     end
-    msg.channel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
+    client._specificChannel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
 end
 
 
