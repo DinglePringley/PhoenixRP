@@ -97,8 +97,6 @@ commands[prefix.."meeting"] = function(user, msg)
 	end
 end)
 
-commands
-
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
 
