@@ -45,7 +45,6 @@ end)
 
 client:on('memberJoin', function(member)
         member:addRole("680055508014858287")
-    end
 end)
 
 
