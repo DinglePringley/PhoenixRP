@@ -22,7 +22,6 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         guild = client:getGuild("679841824130859086")
-    end
 end)
 
 client:on('messageCreate', function(message)
