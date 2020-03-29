@@ -17,13 +17,13 @@ client:on('ready', function()
     print('Logged in as '.. client.user.username)
 end)
 
---client:on('ready', function()
---    while( true )
---    do
---        client:setGame("with the APC Discord")
---        guild = client:getGuild("679841824130859086")
---    end
---end)
+client:on('ready', function()
+    while( true )
+    do
+        client:setGame("with the APC Discord")
+        guild = client:getGuild("679841824130859086")
+    end
+end)
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
@@ -81,21 +81,20 @@ end
     end
 end
 
---commands[prefix.."meeting"] = function(user, msg)
---    print(os.date("%A"))
---		if not msg then return end
---		if not msg.member then return end
---    	if not msg.member:hasRole("680055508014858287") then 
---    	msg.channel:send("You do not have the right permissions to do this request sir!") 
---    	return 
---    	end
---    	if os.date("%A") ~= "Sunday" then
---       	 msg.channel:send("Command must be ran on a saturday sir!") 
---       	 return
---    	end
---    	msg.channel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
---	end
---end)
+commands[prefix.."meeting"] = function(user, msg)
+    print(os.date("%A"))
+		if not msg then return end
+		if not msg.member then return end
+    	if not msg.member:hasRole("680055508014858287") then 
+    	msg.channel:send("You do not have the right permissions to do this request sir!") 
+    	return 
+    	end
+    	if os.date("%A") ~= "Saturday" then
+       	 msg.channel:send("Command must be ran on a saturday sir!") 
+       	 return
+    	end
+    	msg.channel:send("Meeting is Today at 7:30PM GMT make sure you can attend!")
+end)
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
