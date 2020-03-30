@@ -130,6 +130,17 @@ commands[prefix.."meeting"] = function (user, msg)
     	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
 
+commands[prefix.."Test"] = function (user, msg)
+   msg.channel:send {
+        embed = {
+            description = "Testing and that",
+            color = discordia.Color.fromRGB(255, 140, 0).value
+    }
+}
+end
+
+
+
 --client:on('memberUpdate', function(member)
 --    if(member:hasRole("563037544271314965")) then
 --    member:setNickname("PPC "..member.username)
@@ -172,15 +183,6 @@ end
 --        }
 --    }    
 --end
-
-commands[prefix.."Test"] = function (user, msg)
-   msg.channel:send {
-        embed = {
-            description = "Testing and that",
-            color = discordia.Color.fromRGB(255, 140, 0).value
-    }
-}
-end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
