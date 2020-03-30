@@ -131,7 +131,7 @@ commands[prefix.."meeting"] = function (user, msg)
 end
 
 commands[prefix.."Test"] = function (user, msg)
-   msg.channel:send {
+   message.channel:send {
         embed = {
             description = "Testing and that",
             color = discordia.Color.fromRGB(255, 140, 0).value
