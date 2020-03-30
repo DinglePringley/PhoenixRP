@@ -27,8 +27,7 @@ client:on('ready', function()
         client._emojiTick = client._PoliceGuild:getEmoji("670435013891981332")
 	    client._emojiCross = client._PoliceGuild:getEmoji("454740147225755648")
         client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
-    end
-    if os.date("%A") ~= "Monday" then
+        if os.date("%A") ~= "Monday" then
        	client._specificChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.") 
     end
 end)
