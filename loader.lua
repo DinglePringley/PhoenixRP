@@ -24,8 +24,8 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
-        client._emojiTick = client._PoliceGuild:getEmoji("670435013891981332")
-	    client._emojiCross = client._PoliceGuild:getEmoji("454740147225755648")
+        client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
+	    client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
     end
 end)
@@ -71,7 +71,7 @@ end)
         for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
-            u:kick("Banned using !kick command")
+            u:kick("Kick using !kick command")
             msg.channel:send("|Kicking "..v.mentionString.."!")
         end
     else
