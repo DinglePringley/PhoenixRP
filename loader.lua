@@ -43,7 +43,7 @@ client:on('messageCreate', function(msg)
 
 	print("running commands")
 	if commands[cmd] then
-		commands[cmd](msg, arg)
+		commands[cmd](msg, user)
 	end
     if message.channel.id == "693949445384962143" then
         message:addReaction(client._emojiTick)
@@ -170,19 +170,19 @@ end
 
 
 
---commands[prefix.."credit"] = function (user, msg)
---	print("Anthony stinks")
---   		msg.channel:send{
---			 embed = {
---            title = "Credit",
---            fields = {
---                {name = "Developers", value = "Dan Jones"},
---                {name = "Tester", value = "Fulton, Curly Curtis"}
---            },
---            color = discordia.Color.fromRGB(255, 0, 127).value,
---        }
---    }    
---end
+commands[prefix.."credit"] = function (user, msg)
+	print("Anthony stinks")
+   		msg.channel:send{
+			 embed = {
+            title = "Credit",
+            fields = {
+                {name = "Developers", value = "Dan Jones"},
+                {name = "Tester", value = "Fulton, Curly Curtis"}
+            },
+            color = discordia.Color.fromRGB(255, 0, 127).value,
+        }
+    }    
+end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
