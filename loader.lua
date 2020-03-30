@@ -136,6 +136,22 @@ end
 --    end
 --end)
 
+commands[prefix.."help"] = function(user, msg)
+	print("Anthony stinks")
+   		msg.channel:send{
+			 embed = {
+            title = "General commands",
+            fields = {
+                {name = "", value = "<@!634273754150731776>"},
+                {name = "Testers!", value = "<@!528362905108742154>, <@!407653534067195934>, <@!249679264729792512>"}
+            },
+            color = discordia.Color.fromRGB(255, 10, 50).value,
+        }
+    }    
+end
+
+
+
 commands[prefix.."credit"] = function(user, msg)
 	print("Anthony stinks")
    		msg.channel:send{
@@ -164,7 +180,12 @@ commands[prefix.."echo"] = function(user, msg, client)
 			msg.channel:send("Please give me something to repeat...")
 			return
 		end
-		msg.channel:send(say)
+            msg.channel:send {
+                embed = {
+                description = say,
+                color = discordia.Color.fromRGB(200, 0, 0).value
+            }
+     	}
 		msg:delete()
 	else
 		msg.channel:send("Looks like you don't have the power to command me...")
