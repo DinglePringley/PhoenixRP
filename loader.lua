@@ -28,6 +28,9 @@ client:on('ready', function()
 	    client._emojiCross = client._PoliceGuild:getEmoji("454740147225755648")
         client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
     end
+    if os.date("%A") ~= "Monday" then
+       	client._specificChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.") 
+    end
 end)
 
 client:on('messageCreate', function(message)
@@ -46,9 +49,6 @@ client:on('messageCreate', function(message)
         if message.channel.id == "693949445384962143" then
         message:addReaction(client._emojiTick)
         message:addReaction(client._emojiCross)
-    end
-    	if os.date("%A") ~= "Monday" then
-       	client._specificChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.") 
     end
 end)
 
