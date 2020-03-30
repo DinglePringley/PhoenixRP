@@ -144,7 +144,7 @@ commands[prefix.."credit"] = function(user, msg)
                 {name = "Developer", value = "Dan Jones"},
                 {name = "Testers", value = "Fulton, Curly Curtis"}
             },
-            color = discordia.Color.fromRGB(255, 0, 0).value,
+            color = discordia.Color.fromRGB(255, 0, 50).value,
         }
     }    
 end
