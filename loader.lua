@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local working = "Tuesday 00:25:00"
+local working = "Tuesday 00:30:00"
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
@@ -22,23 +22,18 @@ end)
 client:on('ready', function()
     while( true )
     do
+    if os.date("%A %H:%M:%S") == 5MinuteWarning then
+        guild = client:getGuild("358709912089657344")
+        client._GuildChannel = guild:getChannel("358711926060089354")
+        client._GuildChannel:send("Test but Michael Stinks")
+        break
+    end
+
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
-	    client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
+        client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
-    end
-end)
-
-client:on('ready', function()
-    while(true)
-    do
-        if os.date("%A %H:%M:%S") == working then
-			guild = client:getGuild(policeGuild)
-            client._DingleDev = guild:getChannel("358711926060089354")
-            client._DingleDev:send("Testing and that")
-            break
-        end
     end
 end)
 
@@ -102,11 +97,11 @@ end)
     end
 end
 
-commands[prefix.."mute"] = function(user, msg)
+commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people when requested
 	print("Mute command running")
 end
 
-commands[prefix.."meeting"] = function(user, msg)
+commands[prefix.."meeting"] = function(user, msg) -- Meeting command
     print(os.date("%A"))
 		if not msg then return end
 		if not msg.member then return end
@@ -148,7 +143,7 @@ end
 --    end
 --end)
 
-commands[prefix.."help"] = function(user, msg)
+commands[prefix.."help"] = function(user, msg) -- General help command
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
@@ -164,7 +159,7 @@ end
 
 
 
-commands[prefix.."credit"] = function(user, msg)
+commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
@@ -178,7 +173,7 @@ commands[prefix.."credit"] = function(user, msg)
     }    
 end
 
-commands[prefix.."echo"] = function(user, msg, client)
+commands[prefix.."echo"] = function(user, msg, client) -- Will repeat the words you request it to say
 	if not user then return end
 	if user:hasRole("417055663030796299") then
 		local content = olib.Explode(" ", msg.content)
@@ -204,7 +199,8 @@ commands[prefix.."echo"] = function(user, msg, client)
 	end
 end
 
-    commands[prefix.."kick"] = function(user, msg)
+
+    commands[prefix.."kick"] = function(user, msg) -- General kick function
     print("Running kick function")
     if not user then return end
     print("test")
