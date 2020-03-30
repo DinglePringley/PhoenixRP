@@ -115,6 +115,11 @@ commands[prefix.."mute"] = function(user, msg)
 	print("Mute command running")
 end
 
+commands[prefix.."Test"] = function (user, msg)
+   msg.channel:send("test")
+end
+
+
 commands[prefix.."meeting"] = function (user, msg)
     print(os.date("%A"))
 		if not msg then return end
