@@ -60,35 +60,6 @@ client:on('memberJoin', function(member)
     member:setNickname("PCSO "..member.username)
 end)
 
-    commands[prefix.."kick"] = function(user, msg)
-    print("Running kick function")
-    if not user then return end
-    print("test")
-    if msg.member:hasPermission(nil, "kickMembers") then
-        print("Permission granted")
-        local content = olib.Explode(" ", msg.content)
-		local say = ""
-        local targets = msg.mentionedUsers
-        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to kick sir!") return end
-        for k, v in pairs(content) do
-			if not (k == 1) then
-			say = say.." "..v
-			if say == "" then
-			msg.channel:send("Please give me something to repeat...")
-			return
-		end
-        for k, v in pairs(targets) do
-            local u = msg.guild:getMember(v)
-            if not u then return end
-            u:kick("Kick using !kick command")
-            msg.channel:send("|Kicking "..v.mentionString.."!")
-        end
-    else
-        msg.channel:send("You do not have permission to do that sir!")
-    end
-end
-
-
     commands[prefix.."ban"] = function(user, msg)
     print("Running kick function")
     if not user then return end
