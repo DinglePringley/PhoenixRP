@@ -55,7 +55,7 @@ end)
 
 client:on('memberJoin', function(member)
     member:addRole("563037666283880470")
-    member:addRole("563037544271314965")
+    member:addRole("504289165333102602")
     member:addRole("")
     member:setNickname("PCSO "..member.username)
 end)
