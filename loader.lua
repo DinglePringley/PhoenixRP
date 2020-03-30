@@ -63,15 +63,23 @@ end)
     commands[prefix.."ban"] = function(user, msg)
     print("Running kick function")
     if not user then return end
-    print("test")
-    if msg.member:hasPermission(nil, "banMembers") then
-        print("Permission granted")
+        local content = olib.Explode(" ", msg.content)
+		local say = ""
         local targets = msg.mentionedUsers
-        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to ban!") return end
+        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to kick sir!") return end
+        for k, v in pairs(content) do
+			if not (k == 1) then
+			say = say.." "..v
+		end
+	end 
+			if say == "" then
+				msg.channel:send("Please give me a reason")
+			return
+		end
         for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
-            u:ban("Banned using !ban command")
+            u:ban(say)
             msg.channel:send("Banning "..v.mentionString.."!")
         end
     else
@@ -183,7 +191,7 @@ end
             local u = msg.guild:getMember(v)
             if not u then return end
             u:kick(say)
-            msg.channel:send("|Kicking "..v.mentionString.."!")
+            msg.channel:send("|Kicking "..v.mentionString.."for:"..say)
         end
     else
         msg.channel:send("You do not have permission to do that sir!")
