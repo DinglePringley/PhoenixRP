@@ -160,8 +160,8 @@ commands[prefix.."credit"] = function(user, msg)
 end
 
 commands[prefix.."echo"] = function(user, msg, client)
-	if not user then return end
-	if user:hasRole("361232247065673739", "417055663030796299") then
+	if not user then return end 361232247065673739
+	if user:hasRole("417055663030796299", "361232247065673739") then
 		local content = olib.Explode(" ", msg.content)
 		local say = ""
 		for k, v in pairs(content) do
