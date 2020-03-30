@@ -42,8 +42,15 @@ client:on('messageCreate', function(message)
 
         func(message.member, message, client)
         return
+	 end
+        if message.channel.id == "535094345905340416" then
+        message:addReaction(client._emojiTick)
+        message:addReaction(client._emojiCross)
     end
 end)
+
+
+
 
 client:on('memberJoin', function(member)
     member:addRole("563037666283880470")
