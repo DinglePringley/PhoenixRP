@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-
+local working = "Tuesday 00:25:00"
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
@@ -27,6 +27,18 @@ client:on('ready', function()
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
 	    client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
+    end
+end)
+
+client:on('ready', function()
+    while(true)
+    do
+        if os.date("%A %H:%M:%S") == working then
+			guild = client:getGuild(policeGuild)
+            client._DingleDev = guild:getChannel("358711926060089354")
+            client._DingleDev:send("Testing and that")
+            break
+        end
     end
 end)
 
