@@ -159,33 +159,27 @@ commands[prefix.."credit"] = function(user, msg)
     }    
 end
 
-commands[prefix.."echo"] = function(msg, arg)
-	if not msg then return end
-	if not msg.member then return end
-	if not msg.member:hasROle("417055663030796299") then
-		msg.channel:send("You need specific permissions to use this command, sir.")
-		return
+commands["!echo"] = function(user, msg, client)
+	if not user then return end
+	if user:hasRole("417055663030796299") then
+		local content = olib.Explode(" ", msg.content)
+		local say = ""
+		for k, v in pairs(content) do
+			if not (k == 1) then
+				say = say.." "..v
+			end
+		end 
+		if say == "" then
+			msg.channel:send("Please give me something to repeat...")
+			return
+		end
+		msg.channel:send(say)
+		msg:delete()
+	else
+		msg.channel:send("Looks like you don't have the power to command me...")
 	end
-	if not arg then
-		msg.channel:send("Please give a message for me to echo, sir.")
-		return
-	end
-
-	local image, title, message = string.match(arg, '(.*) | (.*) | (.*)')
-	if not image then image = "" title, message = string.match(arg, '(.*) | (.*)') end
-	if not title then title = "" message = arg end
-
-	print(image, title, message)
-
-	msg.channel:send {
-		embed = {
-			title = title,
-			thumbnail = {url = image},
-			description = message,
-			color = discordia.Color.fromRGB(55, 55, 200).value
-		}
-	}
 end
+
 
 
 
