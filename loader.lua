@@ -30,7 +30,7 @@ client:on('ready', function()
         if os.date("%A") ~= "Monday" then
        	client._specificChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.") 
     end
-end)
+end
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
