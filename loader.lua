@@ -30,6 +30,27 @@ client:on('ready', function()
     end
 end)
 
+client:on('messageCreate', function(msg)
+	local message = msg
+	local user = message.author
+	local member = message.member
+	if user == client.user then return end
+	if user.bot then return end
+	if not (msg.guild == client._PoliceGuild) then return end
+
+	local cmd, arg = string.match(message.content, '(%S+) (.*)')
+	if not cmd then cmd = message.content end
+
+	print("running commands")
+	if commands[cmd] then
+		commands[cmd](msg, arg)
+	end
+    if message.channel.id == "693949445384962143" then
+        message:addReaction(client._emojiTick)
+        message:addReaction(client._emojiCross)
+    end
+end)
+
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
     if not cmd then cmd = message.content end
@@ -136,6 +157,8 @@ end
 --    end
 --end)
 
+
+
 commands[prefix.."credit"] = function(user, msg)
 	print("Anthony stinks")
    		msg.channel:send{
@@ -148,27 +171,6 @@ commands[prefix.."credit"] = function(user, msg)
         }
     }    
 end
-
-client:on('messageCreate', function(msg)
-	local message = msg
-	local user = message.author
-	local member = message.member
-	if user == client.user then return end
-	if user.bot then return end
-	if not (msg.guild == client._PoliceGuild) then return end
-
-	local cmd, arg = string.match(message.content, '(%S+) (.*)')
-	if not cmd then cmd = message.content end
-
-	print("running commands")
-	if commands[cmd] then
-		commands[cmd](msg, arg)
-	end
-    if message.channel.id == "693949445384962143" then
-        message:addReaction(client._emojiTick)
-        message:addReaction(client._emojiCross)
-    end
-end)
 
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
