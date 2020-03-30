@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local Warning = "Tuesday 00:55:00"
+local Warning = "Tuesday 01:00:00"
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
@@ -33,10 +33,10 @@ end)
 client:on('ready', function()
     while(true)
     do
-        if os.date("%A %H:%M:%S") == Warning then
-            guild = client:getGuild(policeGuild)
+        if os.date("%A %H:%M:%S") == "Tuesday 00:58:00" then
+            guild = client:getGuild("358709912089657344")
             client._GuildChannel = guild:getChannel("358711926060089354")
-            client._GuildChannel:send("Michael stinks, this is just a test")
+            client._GuildChannel:send("Dingles bad, this is just a test")
             break
         end
     end
