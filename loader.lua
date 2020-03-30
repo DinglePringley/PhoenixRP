@@ -24,8 +24,8 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
-      --  client._emojiTick = client._PoliceGuild:getEmoji("670433015171645450")
-    	--client._emojiCross = client._PoliceGuild:getEmoji("670545387731288086")
+        client._emojiTick = client._PoliceGuild:getEmoji("670433015171645450")
+    	client._emojiCross = client._PoliceGuild:getEmoji("670545387731288086")
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
     end
 end)
@@ -43,13 +43,12 @@ client:on('messageCreate', function(msg)
 
 	print("running commands")
 	if commands[cmd] then
-		commands[cmd](msg, user)
+		commands[cmd](msg, arg)
 	end
-
---    if message.channel.id == "693949445384962143" then
---        message:addReaction(client._emojiTick)
---        message:addReaction(client._emojiCross)
---    end
+    if message.channel.id == "693949445384962143" then
+        message:addReaction(client._emojiTick)
+        message:addReaction(client._emojiCross)
+    end
 end)
 
 client:on('messageCreate', function(message)
@@ -104,7 +103,7 @@ end
         for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
-            u:ban("")
+            u:ban("Banned using !ban command")
             msg.channel:send("Banning "..v.mentionString.."!")
         end
     else
@@ -116,12 +115,7 @@ commands[prefix.."mute"] = function(user, msg)
 	print("Mute command running")
 end
 
-commands[prefix.."Test"] = function (user, msg)
-   msg.channel:send("test")
-end
-
-
-commands[prefix.."meeting"] = function (user, msg)
+commands[prefix.."meeting"] = function(user, msg)
     print(os.date("%A"))
 		if not msg then return end
 		if not msg.member then return end
@@ -134,19 +128,6 @@ commands[prefix.."meeting"] = function (user, msg)
        	 return
     	end
     	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
-end
-
---commands[prefix.."Test"] = function (user, msg)
---   channel:send {
---        embed = {
---            description = "Testing and that",
---            color = discordia.Color.fromRGB(255, 140, 0).value
---    }
---}
---end
-
-commands[prefix.."Test"] = function (user, msg)
-   msg.channel:send("test")
 end
 
 --client:on('memberUpdate', function(member)
@@ -184,13 +165,13 @@ commands[prefix.."credit"] = function (user, msg)
 			 embed = {
             title = "Credit",
             fields = {
-                {name = "Developers", value = "Dan Jones"},
-                {name = "Tester", value = "Fulton, Curly Curtis"}
+                {name = "Tester", value = "Dan Jones, Curly Curtis"}
             },
             color = discordia.Color.fromRGB(255, 0, 127).value,
         }
     }    
 end
+
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
