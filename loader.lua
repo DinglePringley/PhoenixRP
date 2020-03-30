@@ -43,7 +43,7 @@ client:on('messageCreate', function(message)
         func(message.member, message, client)
         return
 	 end
-        if message.channel.id == "535094345905340416" then
+        if message.channel.id == "693949445384962143" then
         message:addReaction(client._emojiTick)
         message:addReaction(client._emojiCross)
     end
