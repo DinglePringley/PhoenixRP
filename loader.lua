@@ -47,6 +47,8 @@ client:on('messageCreate', function(message)
         message:addReaction(client._emojiTick)
         message:addReaction(client._emojiCross)
     end
+    	if os.date("%A") ~= "Monday" then
+       	msg.channel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.") 
 end)
 
 
