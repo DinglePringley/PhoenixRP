@@ -50,7 +50,7 @@ client:on('messageCreate', function(msg)
 --        message:addReaction(client._emojiTick)
 --        message:addReaction(client._emojiCross)
 --    end
---end)
+end)
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
