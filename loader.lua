@@ -60,30 +60,33 @@ client:on('memberJoin', function(member)
     member:setNickname("PCSO "..member.username)
 end)
 
-    commands[prefix.."ban"] = function(user, msg)
-    print("Running kick function")
+    commands[prefix.."Ban"] = function(user, msg)
+    print("Running ban function")
     if not user then return end
+    print("test")
+    if msg.member:hasPermission(nil, "banMembers") then
+        print("Permission granted")
         local content = olib.Explode(" ", msg.content)
 		local say = ""
         local targets = msg.mentionedUsers
-        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to kick sir!") return end
+        if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to ban sir!") return end
         for k, v in pairs(content) do
 			if not (k == 1) then
 			say = say.." "..v
 		end
 	end 
 			if say == "" then
-				msg.channel:send("Please give me a reason")
+				msg.channel:send("Please give me a reason to ban this person!")
 			return
 		end
         for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
             u:ban(say)
-            msg.channel:send("Banning "..v.mentionString.."!")
+            msg.channel:send("Banning "..v.mentionString.."for:"..say)
         end
     else
-        msg.channel:send("Permission denied!")
+        msg.channel:send("You do not have permission to do that sir!")
     end
 end
 
