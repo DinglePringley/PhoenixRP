@@ -24,30 +24,7 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
-        client._emojiTick = client._PoliceGuild:getEmoji("670433015171645450")
-    	client._emojiCross = client._PoliceGuild:getEmoji("670545387731288086")
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
-    end
-end)
-
-client:on('messageCreate', function(msg)
-	local message = msg
-	local user = message.author
-	local member = message.member
-	if user == client.user then return end
-	if user.bot then return end
-	if not (msg.guild == client._PoliceGuild) then return end
-
-	local cmd, arg = string.match(message.content, '(%S+) (.*)')
-	if not cmd then cmd = message.content end
-
-	print("running commands")
-	if commands[cmd] then
-		commands[cmd](msg, arg)
-	end
-    if message.channel.id == "693949445384962143" then
-        message:addReaction(client._emojiTick)
-        message:addReaction(client._emojiCross)
     end
 end)
 
@@ -69,6 +46,7 @@ end)
 client:on('memberJoin', function(member)
     member:addRole("563037666283880470")
     member:addRole("563037544271314965")
+    member:addRole("")
     member:setNickname("PCSO "..member.username)
 end)
 
@@ -157,9 +135,7 @@ end
 --    end
 --end)
 
-
-
-commands[prefix.."credit"] = function (user, msg)
+commands[prefix.."credit"] = function(user, msg)
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
@@ -167,11 +143,10 @@ commands[prefix.."credit"] = function (user, msg)
             fields = {
                 {name = "Tester", value = "Dan Jones, Curly Curtis"}
             },
-            color = discordia.Color.fromRGB(255, 0, 127).value,
+            color = discordia.Color.fromRGB(255, 0, 0).value,
         }
     }    
 end
-
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
 
