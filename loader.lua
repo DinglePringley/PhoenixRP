@@ -22,8 +22,8 @@ end)
 client:on('ready', function()
     while( true )
     do
-    local 5MinuteWarning = "Tuesday 00:45:00"
-    if os.date("%A %H:%M:%S") == 5MinuteWarning then
+    local MinuteWarning = "Tuesday 00:45:00"
+    if os.date("%A %H:%M:%S") == MinuteWarning then
         guild = client:getGuild("358709912089657344")
         client._GuildChannel = guild:getChannel("358711926060089354")
         client._GuildChannel:send("Test but Michael Stinks")
