@@ -45,6 +45,7 @@ client:on('messageCreate', function(msg)
 	if commands[cmd] then
 		commands[cmd](msg, user)
 	end
+
     if message.channel.id == "693949445384962143" then
         message:addReaction(client._emojiTick)
         message:addReaction(client._emojiCross)
