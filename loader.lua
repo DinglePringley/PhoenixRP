@@ -103,7 +103,7 @@ end
         for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
-            u:ban("Banned using !ban command")
+            u:ban("")
             msg.channel:send("Banning "..v.mentionString.."!")
         end
     else
@@ -115,7 +115,7 @@ commands[prefix.."mute"] = function(user, msg)
 	print("Mute command running")
 end
 
-commands[prefix.."meeting"] = function(user, msg)
+commands[prefix.."meeting"] = function (user, msg)
     print(os.date("%A"))
 		if not msg then return end
 		if not msg.member then return end
@@ -159,13 +159,14 @@ end
 
 
 
-commands[prefix.."credit"] = function(user, msg)
+commands[prefix.."credit"] = function (user, msg)
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
             title = "Credit",
             fields = {
-                {name = "Tester", value = "Dan Jones, Curly Curtis"}
+                {name = "Developers", value = "Dan Jones"},
+                {name = "Tester", value = "Fulton, Curly Curtis"}
             },
             color = discordia.Color.fromRGB(255, 0, 127).value,
         }
