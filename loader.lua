@@ -24,6 +24,8 @@ client:on('ready', function()
     do
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
+        client._emojiTick = client._PoliceGuild:getEmoji("670435013891981332")
+	    client._emojiCross = client._PoliceGuild:getEmoji("454740147225755648")
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
     end
 end)
