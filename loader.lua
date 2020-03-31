@@ -40,7 +40,7 @@ end)
 --            break
 --        end
 --    end
-end)
+--end)
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
