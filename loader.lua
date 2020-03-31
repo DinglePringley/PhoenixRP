@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Tuesday 1:13:00"
+local MinuteWarning = "Tuesday 1:14:30"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
@@ -28,8 +28,8 @@ client:on('ready', function()
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
-            client._GuildChannel = guild:getChannel("358712811007770644")
-            client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time!\n Important announcements and changes are disclosed during the meeting.\n If you can not make the meeting read the meeting notes posted after the meeting.")
+            client._GuildChannel = guild:getChannel("358711926060089354")
+            client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.")
             break
         end
     end
