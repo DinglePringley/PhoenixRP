@@ -36,7 +36,7 @@ client:on('ready', function()
 end)
 
 client:on('memberJoin', function(member)
-			client._joinChannel:send("Test" member.user.mentionString))
+			client._joinChannel:send("Test" member.user.mentionString)
 		end
 
 client:on('messageCreate', function(message)
