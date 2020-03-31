@@ -24,6 +24,7 @@ client:on('ready', function()
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
+        client._joinChannel = client._PoliceGuild:getChannel("694497682793693264")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
@@ -33,6 +34,11 @@ client:on('ready', function()
         end
     end
 end)
+
+client:on('memberJoin', function(member)
+			client._joinChannel:send("Test" member.user.mentionString))
+		end
+
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
     if not cmd then cmd = message.content end
