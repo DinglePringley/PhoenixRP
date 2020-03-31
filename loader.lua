@@ -35,9 +35,9 @@ client:on('ready', function()
     end
 end)
 
-client:on('memberJoin', function(member)
-			client._joinChannel:send("Test" member.user.mentionString)
-		end
+--client:on('memberJoin', function(member)
+--			client._joinChannel:send("Test" member.user.mentionString)
+--		end
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
