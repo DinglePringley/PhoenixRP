@@ -17,6 +17,7 @@ local MinuteWarning = "Tuesday 04:00:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
+        print('The time right now is: '..os.date("%A %H:%M:%S"))
         client:setGame("with the APC Discord")
     while( true )
     do
