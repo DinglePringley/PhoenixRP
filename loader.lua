@@ -13,18 +13,17 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Tuesday 1:14:30"
+local MinuteWarning = "Tuesday 01:20:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
-        print('The time right now is: '..os.date("%A %H:%M:%S"))
-        client:setGame("with the APC Discord")
-    while( true )
+    while(true)
     do
+        client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
-        client._specificChannel = client._PoliceGuild:getChannel("358711926060089354")
+        client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
@@ -34,7 +33,6 @@ client:on('ready', function()
         end
     end
 end)
-
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
     if not cmd then cmd = message.content end
