@@ -28,7 +28,7 @@ client:on('ready', function()
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
             client._GuildChannel = guild:getChannel("358711926060089354")
-            client._GuildChannel:send("Hello guys this is a automatic message! im alive <@634273754150731776>")
+            client._GuildChannel:send("Aron B stinks")
             break
         end
     end
