@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Tuesday 01:20:00"
+local MinuteWarning = "Thursday 11:00:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
@@ -23,11 +23,11 @@ client:on('ready', function()
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
-        client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
+        client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
-            client._GuildChannel = guild:getChannel("358711926060089354")
+            client._GuildChannel = guild:getChannel("358712811007770644")
             client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.")
             break
         end
