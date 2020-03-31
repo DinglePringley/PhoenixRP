@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Thursday 11:00:00"
+local MinuteWarning = "Tuesday 1:11:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
