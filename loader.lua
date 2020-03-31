@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Tuesday 1:11:00"
+local MinuteWarning = "Tuesday 1:13:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
@@ -24,7 +24,7 @@ client:on('ready', function()
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
-        client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
+        client._specificChannel = client._PoliceGuild:getChannel("358711926060089354")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
