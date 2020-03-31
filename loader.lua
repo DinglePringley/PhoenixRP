@@ -13,7 +13,7 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Tuesday 01:43:00"
+local MinuteWarning = "Tuesday 02:56:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
@@ -106,11 +106,11 @@ commands[prefix.."meeting"] = function(user, msg) -- Meeting command
     	msg.channel:send("You do not have the right permissions to do this request sir!") 
     	return 
     	end
-    	if os.date("%A") ~= "Tuesday" then
+    	if os.date("%A") ~= "Saturday" then
        	 msg.channel:send("Command must be ran on a saturday sir!") 
        	 return
     	end
-    	msg.Channel:send("Don't forget that the meeting is at 7:30PM Tonight!")
+    	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
 
 --client:on('memberUpdate', function(member)
