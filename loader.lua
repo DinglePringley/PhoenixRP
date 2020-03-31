@@ -17,9 +17,9 @@ local MinuteWarning = "Tuesday 01:43:00"
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
+        client:setGame("with the APC Discord")
     while( true )
     do
-        client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
@@ -106,11 +106,11 @@ commands[prefix.."meeting"] = function(user, msg) -- Meeting command
     	msg.channel:send("You do not have the right permissions to do this request sir!") 
     	return 
     	end
-    	if os.date("%A") ~= "Saturday" then
+    	if os.date("%A") ~= "Tuesday" then
        	 msg.channel:send("Command must be ran on a saturday sir!") 
        	 return
     	end
-    	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
+    	msg.Channel:send("Don't forget that the meeting is at 7:30PM Tonight!")
 end
 
 --client:on('memberUpdate', function(member)
