@@ -15,8 +15,6 @@ local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
 
-app.listen(8000, () => console.log('PNC API Online on Port 8000'));
-
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
     while(true)
