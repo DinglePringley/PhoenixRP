@@ -1,6 +1,9 @@
 
 local discordia = require('discordia')
 local olib = require("./olib.lua")
+const cheerio = require("cheerio");
+const request = require("request");
+const express = require('express');
 --local commands = require("./commands.lua")
 discordia.extensions()
 
@@ -14,6 +17,28 @@ local commands = {}
 local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
+
+const app = express();
+
+app.get('/player/:id', (req, res) => {
+    request.get(`https://pnc.phoenixrp.co.uk/dash/roster/apc/`, function(error, response, data) {         
+        const $ = cheerio.load(data);
+        $('#roster tr').each(function() {
+            let info = $(this).text().split("\n");
+            info = info.filter(item => item !== "");
+
+            if(info[3] === req.params.id) {
+                var name = info[1];
+                var rank = info[2];
+                var active = info[4] === "Active" ? true : false
+                let whitelists = String(info[5]).replace(" Stats", "").trim().split("");
+                res.json({name: name, rank: rank, whitelists: whitelists, active: active});
+            }
+        });
+    })
+})
+
+app.listen(8000, () => console.log('PNC API Online on Port 8000'));
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
@@ -37,13 +62,13 @@ end)
 
 client:on('memberJoin', function(member)
     guild = client:getGuild(policeGuild)
-    joinLeave = guild:getChannel("694497682793693264")
+    joinLeave = guild:getChannel("453672836645650435")
     joinLeave:send('Hey welcome <@' .. member.id .. '> to the APC.\n I have assigned you the appropriate tags and have set your name.\n If you have any issues please feel free to make a ticket at <#670432374391177218>. If you need help with making a ticket you can head over to the <#670432843884920833>')
 end)
 
 client:on('memberLeave', function(member)
     guild = client:getGuild(policeGuild)
-    joinLeave = guild:getChannel("694497682793693264")
+    joinLeave = guild:getChannel("453672836645650435")
     joinLeave:send(member.username .. '#' .. member.discriminator .. ' just left the discord :slight_frown:\n\nThank you for your service o7')
     print(member.username)
 end)
