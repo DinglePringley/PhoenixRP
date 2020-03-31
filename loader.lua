@@ -35,9 +35,18 @@ client:on('ready', function()
     end
 end)
 
---client:on('memberJoin', function(member)
---			client._joinChannel:send("Test" member.user.mentionString)
---		end
+client:on('memberJoin', function(member)
+    guild = client:getGuild(policeGuild)
+    joinLeave = guild:getChannel("694497682793693264")
+    joinLeave:send('Hey welcome <@' .. member.id .. '> to the APC. I have assigned you the appropriate tags and have set your name. If you have any issues please feel free to make a ticket at #Createticketchannel. If you need help with making a ticket you can head over to the #tickethelp127892>')
+end)
+
+client:on('memberLeave', function(member)
+    guild = client:getGuild(policeGuild)
+    joinLeave = guild:getChannel("694497682793693264")
+    joinLeave:send(member.username .. '#' .. member.discriminator .. ' just left the discord :slight_frown:\n\nThank you for your service o7')
+    print(member.username)
+end)
 
 client:on('messageCreate', function(message)
 	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
