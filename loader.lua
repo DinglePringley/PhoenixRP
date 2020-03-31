@@ -186,7 +186,7 @@ commands[prefix.."echo"] = function(user, msg, client) -- Will repeat the words 
             msg.channel:send {
                 embed = {
                 description = say,
-                color = discordia.Color.fromRGB(200, 0, 0).value
+                color = discordia.Color.fromRGB(160,82,45).value
             }
      	}
 		msg:delete()
@@ -225,6 +225,8 @@ end
         msg.channel:send("You do not have permission to do that sir!")
     end
 end
+
+
 
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
