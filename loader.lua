@@ -38,7 +38,7 @@ end)
 client:on('memberJoin', function(member)
     guild = client:getGuild(policeGuild)
     joinLeave = guild:getChannel("694497682793693264")
-    joinLeave:send('Hey welcome <@' .. member.id .. '> to the APC. I have assigned you the appropriate tags and have set your name. If you have any issues please feel free to make a ticket at <#670432374391177218>. If you need help with making a ticket you can head over to the <#670432843884920833>')
+    joinLeave:send('Hey welcome <@' .. member.id .. '> to the APC.\n I have assigned you the appropriate tags and have set your name.\n If you have any issues please feel free to make a ticket at <#670432374391177218>. If you need help with making a ticket you can head over to the <#670432843884920833>')
 end)
 
 client:on('memberLeave', function(member)
