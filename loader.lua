@@ -13,24 +13,18 @@ local prefix = ">"
 local commands = {}
 local targets = {}
 local cooldown = {}
-local MinuteWarning = "Tuesday 01:31:00"
+local MinuteWarning = "Tuesday 01:36:00"
 
 client:on('ready', function()
-    print('Logged in as '.. client.user.username)
-end)
-
-client:on('ready', function()
-	    print('Logged in as '.. client.user.username)
+        print('Logged in as '.. client.user.username)
     while( true )
     do
         client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
-	    client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
+        client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("693974403154968608")
-    end
-    while(true)
-    do
+        
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
             client._GuildChannel = guild:getChannel("358711926060089354")
