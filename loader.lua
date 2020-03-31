@@ -1,9 +1,6 @@
 
 local discordia = require('discordia')
 local olib = require("./olib.lua")
-const cheerio = require("cheerio");
-const request = require("request");
-const express = require('express');
 --local commands = require("./commands.lua")
 discordia.extensions()
 
@@ -17,26 +14,6 @@ local commands = {}
 local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
-
-const app = express();
-
-app.get('/player/:id', (req, res) => {
-    request.get(`https://pnc.phoenixrp.co.uk/dash/roster/apc/`, function(error, response, data) {         
-        const $ = cheerio.load(data);
-        $('#roster tr').each(function() {
-            let info = $(this).text().split("\n");
-            info = info.filter(item => item !== "");
-
-            if(info[3] === req.params.id) {
-                var name = info[1];
-                var rank = info[2];
-                var active = info[4] === "Active" ? true : false
-                let whitelists = String(info[5]).replace(" Stats", "").trim().split("");
-                res.json({name: name, rank: rank, whitelists: whitelists, active: active});
-            }
-        });
-    })
-})
 
 app.listen(8000, () => console.log('PNC API Online on Port 8000'));
 
@@ -68,7 +45,7 @@ end)
 
 client:on('memberLeave', function(member)
     guild = client:getGuild(policeGuild)
-    joinLeave = guild:getChannel("453672836645650435")
+    joinLeave = guild:getChannel("453672836645650435c")
     joinLeave:send(member.username .. '#' .. member.discriminator .. ' just left the discord :slight_frown:\n\nThank you for your service o7')
     print(member.username)
 end)
@@ -201,7 +178,7 @@ commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just use
 			 embed = {
             title = "Credit",
             fields = {
-                {name = "Developer!", value = "<@!634273754150731776>"},
+                {name = "Developer!", value = "<@!634273754150731776>, <@325278718937530368>"},
                 {name = "Testers!", value = "<@!528362905108742154>, <@!407653534067195934>, <@!249679264729792512>"}
             },
             color = discordia.Color.fromRGB(255, 10, 50).value,
