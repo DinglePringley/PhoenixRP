@@ -190,11 +190,12 @@ commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just use
         }
     }    
 end
-commands[prefix.."Bots"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
+
+commands[prefix.."bots"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
-            title = "Bots",
+            title = "bots",
             fields = {
                 {name = "Bots in the APC!", value = "<@!277832237553287169>"}
             },
