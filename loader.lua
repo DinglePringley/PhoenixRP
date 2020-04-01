@@ -169,7 +169,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 end
 
 commands[prefix.."reload"] = function(user, msg)
-        clients:top()
+        client:stop()
         client:run("Bot NjkzNzY2NzExNjcyODMyMDcw.XoC8QA.nHx6mGI3QsHzZHb2FNVCauQPZzo")
         print("reloaded!")
         msg.channel:send("Reload the bot!")
