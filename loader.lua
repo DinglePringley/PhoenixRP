@@ -181,6 +181,9 @@ commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just use
 			 embed = {
             title = "Credit",
             fields = {
+		{name = "Developers!", value = "<@!634273754150731776>, <@325278718937530368>"},
+                {name = "Testers!", value = "<@!528362905108742154>, <@!407653534067195934>, <@!249679264729792512>"},
+		{name = "Top Fraggers!", value = "<@!301048048455516161>, <@!125267832404574208>"}
                 {name = "Bots in the APC!", value = "<@!277832237553287169>"}
           },  
             color = discordia.Color.fromRGB(255, 10, 50).value,
@@ -193,9 +196,7 @@ commands[prefix.."Bots"] = function(user, msg) -- Just alittle credit just used 
 			 embed = {
             title = "Bots",
             fields = {
-                {name = "Developers!", value = "<@!634273754150731776>, <@325278718937530368>"},
-                {name = "Testers!", value = "<@!528362905108742154>, <@!407653534067195934>, <@!249679264729792512>"},
-		{name = "Top Fraggers!", value = "<@!301048048455516161>, <@!125267832404574208>"}
+                {name = "Bots in the APC!", value = "<@!277832237553287169>"}
             },
             color = discordia.Color.fromRGB(255, 10, 50).value,
         }
