@@ -181,7 +181,7 @@ commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just use
 			 embed = {
             title = "Credit",
             fields = {
-                {name = "Bots in the APC!", value = "<@!277832237553287169>}
+                {name = "Bots in the APC!", value = "<@!277832237553287169>"}
             
             color = discordia.Color.fromRGB(255, 10, 50).value,
         }
