@@ -170,7 +170,7 @@ end
 
 commands[prefix.."reload"] = function(user, msg)
         clients:stop()
-        client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
+        client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
         print("reloaded!")
         msg.channel:send("Reload the bot!")
 end
@@ -249,6 +249,6 @@ end
 
 
 
-client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoDs1w.l2LWJKB8e7guBctFc7XYRkCOonw")
+client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
 
 
