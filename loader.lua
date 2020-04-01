@@ -168,7 +168,12 @@ commands[prefix.."help"] = function(user, msg) -- General help command
     }    
 end
 
-
+    commands[prefix.."reload"] = function(user, msg)
+        client.destroy()
+        client:run("Bot NjkzNzY2NzExNjcyODMyMDcw.XoC8QA.nHx6mGI3QsHzZHb2FNVCauQPZzo")
+        print("reloaded!")
+        msg.channel:send("Reload the bot!")
+     end 
 
 commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
 	print("Anthony stinks")
