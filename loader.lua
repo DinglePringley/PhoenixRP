@@ -140,7 +140,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 				    client._logChannel:send{
 							embed = {
 								description = u.mentionString.. " has been unmuted after waiting the timer.",
-								color = discordia.color.fromRGB(102,255,102).value
+								color = discordia.Color.fromRGB(102,255,102).value
 							}
 						}			
 				    end)()
@@ -152,7 +152,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 	end
 
 commands[prefix.."unmute"] = function(user,msg)
-    local color = discordia.color.fromRGB(102,255,102).value
+    local color = discordia.Color.fromRGB(102,255,102).value
     print(color)
     if not user then return end
     if msg.member:hasPermission(nil, "kickMembers") then
@@ -167,7 +167,7 @@ commands[prefix.."unmute"] = function(user,msg)
     client._logChannel:send{
         embed = {
             description = u.mentionString.. " has been unmuted after waiting the timer.",
-            color = discordia.color.fromRGB(102,255,102).value
+            color = discordia.Color.fromRGB(102,255,102).value
         }
     }
 end
