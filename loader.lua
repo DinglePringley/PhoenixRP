@@ -1,6 +1,7 @@
 
 local discordia = require('discordia')
 local olib = require("./olib.lua")
+local timer = require("timer")
 --local commands = require("./commands.lua")
 discordia.extensions()
 
@@ -114,6 +115,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 	print("The mute command DOOOO Be kinda working")
 	if msg.member:hasPermission(nil, "kickMembers") then
 		print("Permission granted")
+		local timer = require("timer")
 		local targets = msg.mentionedUsers
 		local args = msg.cleanContent:split(" ")
 		if not args[2] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
