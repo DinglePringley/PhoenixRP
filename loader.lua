@@ -136,6 +136,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 				    if not u:hasRole("670462767584772135") then return end
 				    u:removeRole("670462767584772135")
 				    u:send("You have been unmuted!")
+				   print(color)
 				    client._logChannel:send{
 							embed = {
 								description = u.mentionString.. " has been unmuted after waiting the timer.",
