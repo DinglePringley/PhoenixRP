@@ -172,7 +172,7 @@ commands[prefix.."unmute"] = function(user,msg)
     u:send("You have been unmuted")
     client._logChannel:send{
         embed = {
-            description = u.mentionString.. " has been unmuted by:"msg.author,
+            description = u.mentionString.. " has been unmuted by:" ..msg.author,
             color = discordia.Color.fromRGB(102,255,101).value
         }
     }
