@@ -119,7 +119,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		for k, v in pairs(targets) do
         local u = msg.guild:getMember(v)
         if not u then return end
-        member:addRole("670462767584772135")
+        u:addRole("670462767584772135")
         msg.channel:send(v.mentionString.." has been muted")
 	end
 else
