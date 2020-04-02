@@ -112,7 +112,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 	print("Mute command running")
 	if not user then return end
 	print("The mute command DOOOO Be kinda working")
-	if msg.member:hasPermission(nil, "kickMember") then
+	if msg.member:hasPermission(nil, "kickMembers") then
 		print("Permission granted")
 		local targets = msg.mentionedUsers
 		if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
