@@ -271,7 +271,8 @@ commands[prefix.."bots"] = function(user, msg) -- Just alittle credit just used 
             title = "Bots",
             fields = {
                 {name = "Bots in the APC!", value = "<@!277832237553287169>, <@528362905108742154>, <@525052273827512340>, <@213836326796132353>, <@246724077035847691>, <@118791558416826369>"},
-            color = discordia.Color.fromRGB(255, 10, 50).value,
+       	},
+		color = discordia.Color.fromRGB(255, 10, 50).value,
         }
     }    
 end
