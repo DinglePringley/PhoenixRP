@@ -125,20 +125,21 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		for k, v in pairs(target) do
 			local u = msg.guild:getMember(v)
 			if not u then return end
-			u:addRole("359751206505283594")
+			u:addRole("670462767584772135")
 			msg.channel:send("Jailed "..u.mentionString.." for "..usertime.. " minute(s)!")
 		
 			timer.setTimeout(60000 * usertime, function()
 				   coroutine.wrap(function()
-				    if not u:hasRole("359751206505283594") then return end
-				    u:removeRole("359751206505283594")
-				    u:send("Your jail time has expired!")
+				    if not u:hasRole("670462767584772135") then return end
+				    u:removeRole("670462767584772135")
+				    u:send("You have been unmuted!")
 				    end)()
 				end)
 		    end
 		else
 		    msg.channel:send("Permission denied!")
 		end
+	end
 
 
 
