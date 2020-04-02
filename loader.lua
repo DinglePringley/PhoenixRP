@@ -152,25 +152,27 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 	end
 
 commands[prefix.."unmute"] = function(user,msg)
-	if not user then return end
-	if msg.member:hasPermission(nil, "kickMembers") then
-	local targets = msg.mentionedUsers
-	if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to unmute!") return end
-	for k, v in pairs(targets) do
-	local u = msg.guild:getMember(v)
-	if not u then return end
-	u:removeRole("670462767584772135")
-	msg.channel:send("unmuted "..v.mentionString.."!")
-	u:send("You have been unmuted")
-	client._logChannel:send{
-		embed = {
-			description = u.mentionString.. " has been unmuted after waiting the timer.",
-			color = discordia.color.fromRGB(102,255,102).value,
-		}
-	}
+    local color = discordia.color.fromRGB(102,255,102).value
+    print(color)
+    if not user then return end
+    if msg.member:hasPermission(nil, "kickMembers") then
+    local targets = msg.mentionedUsers
+    if not targets[1] then msg.channel:send("Please @ a user to unmute!") return end
+    for k, v in pairs(targets) do
+    local u = msg.guild:getMember(v)
+    if not u then return end
+    u:removeRole("670462767584772135")
+    msg.channel:send("unmuted "..v.mentionString.."!")
+    u:send("You have been unmuted")
+    client._logChannel:send{
+        embed = {
+            description = u.mentionString.. " has been unmuted after waiting the timer.",
+            color = discordia.color.fromRGB(102,255,102).value
+        }
+    }
 end
 else
-	msg.channel:send("Permission denied!")
+    msg.channel:send("Permission denied!")
 end
 end
 
