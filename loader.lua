@@ -122,7 +122,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		if not args[3] then msg.channel:send("Please prove a time in minutes!") return end
 		 if not (type(tonumber(args[#args])) == "number") then msg.channel:send("Please provide a time in minutes! 1 = 1 minute") return end
 		   print("Working?")
-		for k, v in pairs(target) do
+		for k, v in pairs(targets) do
 			local u = msg.guild:getMember(v)
 			if not u then return end
 			u:addRole("670462767584772135")
