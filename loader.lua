@@ -132,7 +132,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 			msg.channel:send("Muted "..u.mentionString.." for "..usertime.. " minute(s)!")
 			client._logChannel:send{
 					embed = {
-						description = u.mentionString.. "has been muted by:" ..msg.auther,
+						description = u.mentionString.. "has been muted by:" ..msg.author,
 						color = discordia.Color.fromRGB(255,100,52).value
 							}
 						}
@@ -156,7 +156,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		    msg.channel:send("Permission denied!")
 		end
 	end
-
+author
 commands[prefix.."unmute"] = function(user,msg)
     local color = discordia.Color.fromRGB(102,255,102).value
     print(color)
@@ -172,7 +172,7 @@ commands[prefix.."unmute"] = function(user,msg)
     u:send("You have been unmuted")
     client._logChannel:send{
         embed = {
-            description = u.mentionString.. " has been unmuted after waiting the timer.",
+            description = u.mentionString.. " has been unmuted by:"msg.author,
             color = discordia.Color.fromRGB(102,255,102).value
         }
     }
