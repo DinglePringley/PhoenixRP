@@ -156,7 +156,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		    msg.channel:send("Permission denied!")
 		end
 	end
-author
+
 commands[prefix.."unmute"] = function(user,msg)
     local color = discordia.Color.fromRGB(102,255,102).value
     print(color)
