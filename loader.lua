@@ -119,16 +119,25 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		if not args[2] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
 		if not args[3] then msg.channel:send("Please prove a time in minutes!") return end
 		 if not (type(tonumber(args[#args])) == "number") then msg.channel:send("Please provide a time in minutes! 1 = 1 minute") return end
-		for k, v in pairs(targets) do
-        local u = msg.guild:getMember(v)
-        if not u then return end
-        u:addRole("670462767584772135")
-        msg.channel:send(v.mentionString.." has been muted")
-	end
-else
-		msg.channel:send("You do not have permission for that!")
-	end
-end
+		   
+		for k, v in pairs(target) do
+			local u = msg.guild:getMember(v)
+			if not u then return end
+			u:addRole("359751206505283594")
+			msg.channel:send("Jailed "..u.mentionString.." for "..usertime.. " minute(s)!")
+		
+			timer.setTimeout(60000 * usertime, function()
+				   coroutine.wrap(function()
+				    if not u:hasRole("359751206505283594") then return end
+				    u:removeRole("359751206505283594")
+				    u:send("Your jail time has expired!")
+				    end)()
+				end)
+		    end
+		else
+		    msg.channel:send("Permission denied!")
+		end
+
 
 
 commands[prefix.."meeting"] = function(user, msg) -- Meeting command
