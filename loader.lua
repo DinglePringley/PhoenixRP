@@ -116,7 +116,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		print("Permission granted")
 		local targets = msg.mentionedUsers
 		if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
-		or k, v in pairs(targets) do
+		for k, v in pairs(targets) do
         local u = msg.guild:getMember(v)
         if not u then return end
         member:addRole("670462767584772135")
