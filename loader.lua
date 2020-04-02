@@ -171,6 +171,7 @@ end
 else
 	msg.channel:send("Permission denied!")
 end
+end
 
 
 
