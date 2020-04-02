@@ -138,7 +138,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 				    u:send("You have been unmuted!")
 				    client._logChannel:send{
 							embed = {
-								description = u.mentionString.. " has been unmuted after waiting the timer."
+								description = u.mentionString.. " has been unmuted after waiting the timer.",
 								color = discordia.color.fromRGB(102,255,102).value
 							}
 						}			
@@ -163,7 +163,7 @@ commands[prefix.."unmute"] = function(user,msg)
 	u:send("You have been unmuted")
 	client._logChannel:send{
 		embed = {
-			description = u.mentionString.. " has been unmuted after waiting the timer."
+			description = u.mentionString.. " has been unmuted after waiting the timer.",
 			color = discordia.color.fromRGB(102,255,102).value
 		}
 	}
