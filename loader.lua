@@ -165,7 +165,7 @@ commands[prefix.."unmute"] = function(user,msg)
 	client._logChannel:send{
 		embed = {
 			description = u.mentionString.. " has been unmuted after waiting the timer.",
-			color = discordia.color.fromRGB(102,255,102).value
+			color = discordia.color.fromRGB(102,255,102).value,
 		}
 	}
 end
