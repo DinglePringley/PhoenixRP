@@ -130,6 +130,12 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 			if not u then return end
 			u:addRole("670462767584772135")
 			msg.channel:send("Muted "..u.mentionString.." for "..usertime.. " minute(s)!")
+			client._logChannel:send{
+					embed = {
+						description = u.mentionString.. "has been muted by:" ..msg.auther,
+						color = discordia.Color.fromRGB(255,100,52).value
+							}
+						}
 		
 			timer.setTimeout(60000 * usertime, function()
 				   coroutine.wrap(function()
@@ -264,14 +270,7 @@ commands[prefix.."bots"] = function(user, msg) -- Just alittle credit just used 
 			 embed = {
             title = "Bots",
             fields = {
-                {name = "Bots in the APC!", value = "<@!277832237553287169>,
- <@!528362905108742154>,
- <@!525052273827512340>,
- <@!213836326796132353>,
- <@!246724077035847691>,
- <@!118791558416826369>,
-<@!187311442536431616>"}
-            },
+                {name = "Bots in the APC!", value = "<@!277832237553287169>, <@528362905108742154>, <@525052273827512340>, <@213836326796132353>, <@246724077035847691>, <@118791558416826369>"},
             color = discordia.Color.fromRGB(255, 10, 50).value,
         }
     }    
