@@ -15,6 +15,7 @@ local commands = {}
 local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
+local logs = ""
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
@@ -26,6 +27,7 @@ client:on('ready', function()
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
         client._joinChannel = client._PoliceGuild:getChannel("694497682793693264")
+	client._logChannel = client._PoliceGuild:getChannel("544986930987925505")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
@@ -127,13 +129,19 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 			local u = msg.guild:getMember(v)
 			if not u then return end
 			u:addRole("670462767584772135")
-			msg.channel:send("Jailed "..u.mentionString.." for "..usertime.. " minute(s)!")
+			msg.channel:send("Muted "..u.mentionString.." for "..usertime.. " minute(s)!")
 		
 			timer.setTimeout(60000 * usertime, function()
 				   coroutine.wrap(function()
 				    if not u:hasRole("670462767584772135") then return end
 				    u:removeRole("670462767584772135")
 				    u:send("You have been unmuted!")
+				    client._logChannel:send{
+							embed = {
+								description = u.mentionString.. " has been unmuted after waiting the timer.
+								color = discordia.color.fromRGB(102,255,102).value
+							}
+						}			
 				    end)()
 				end)
 		    end
@@ -141,6 +149,29 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		    msg.channel:send("Permission denied!")
 		end
 	end
+
+commands[prefix.."unmute"] = function(user,msg)
+	if not user then return end
+	if msg.member:hasPermission(nil, "kickMembers") then
+	local targets = msg.mentionedUsers
+	if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to unmute!") return end
+	for k, v in pairs(targets) do
+	local u = msg.guild:getMember(v)
+	if not u then return end
+	u:removeRole("670462767584772135")
+	msg.channel:send("unmuted "..v.mentionString.."!")
+	u:send("You have been unmuted")
+	client._logChannel:send{
+		embed = {
+			description = u.mentionString.. " has been unmuted after waiting the timer.
+			color = discordia.color.fromRGB(102,255,102).value
+		}
+	}
+end
+else
+	msg.channel:send("Permission denied!")
+end
+
 
 
 
