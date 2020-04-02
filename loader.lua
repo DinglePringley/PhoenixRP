@@ -115,7 +115,10 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 	if msg.member:hasPermission(nil, "kickMembers") then
 		print("Permission granted")
 		local targets = msg.mentionedUsers
-		if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
+		local args = msg.cleanContent:split(" ")
+		if not args[2] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
+		if not args[3] then msg.channel:send("Please prove a time in minutes!") return end
+		 if not (type(tonumber(args[#args])) == "number") then msg.channel:send("Please provide a time in minutes! 1 = 1 minute") return end
 		for k, v in pairs(targets) do
         local u = msg.guild:getMember(v)
         if not u then return end
