@@ -60,22 +60,24 @@ client:on('memberLeave', function(member)
 end)
 
 client:on('messageCreate', function(message)
-	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
-    if not cmd then cmd = message.content end
+    local cmd, arg = string.match(message.content, '(%S+) (.*)')
+if not cmd then cmd = message.content end
 
-    local func = commands[string.lower(cmd)]
-    if func then
-        if not message.member then return end
-        if not message then return end
-        if not client then return end
+local func = commands[string.lower(cmd)]
+if func then
+    if not message.member then return end
+    if not message then return end
+    if not client then return end
 
-        func(message.member, message, client)
-        return
-	 end
-        if message.channel.id == "693949445384962143" then
-        message:addReaction(client._emojiTick)
-        message:addReaction(client._emojiCross)
-    end
+    func(message.member, message, client)
+    return
+ end
+    if message.channel.id == "693949445384962143" then
+    message.channel:send(message.content);
+    message:addReaction(client._emojiTick)
+    message:addReaction(client._emojiCross)
+end
+
 end)
 
 
