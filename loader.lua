@@ -126,7 +126,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 		local targets = msg.mentionedUsers
 		local args = msg.cleanContent:split(" ")
 		local usertime = args[#args]
-		if not args[2] then msg.channel:send("Please @ atleast 1 person you want to mute sir!") return end
+		if not args[2] then msg.channel:send("Please @ atleast 1 person you want to mute!") return end
 		if not args[3] then msg.channel:send("Please prove a time in minutes!") return end
 		 if not (type(tonumber(args[#args])) == "number") then msg.channel:send("Please provide a time in minutes! 1 = 1 minute") return end
 		   print("Working?")
