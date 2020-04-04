@@ -60,9 +60,14 @@ client:on('memberLeave', function(member)
 end)
 
 client:on('messageCreate', function(message)
-	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
+	local cmd, arg = string.match(message.content, '(%S+) (.*)')
+	local content = olib.Explode(" ", msg.content)
+	local say = ""
     if not cmd then cmd = message.content end
-
+	
+		for k, v in pairs(content) do
+			if not (k == 1) then
+				say = say.." "..v
     local func = commands[string.lower(cmd)]
     if func then
         if not message.member then return end
@@ -73,6 +78,13 @@ client:on('messageCreate', function(message)
         return
 	 end
         if message.channel.id == "693949445384962143" then
+	    msg.channel:send {
+                embed = {
+                description = say,
+                color = discordia.Color.fromRGB(43, 100, 255).value
+            }
+     	}
+	msg:delete()
         message:addReaction(client._emojiTick)
         message:addReaction(client._emojiCross)
     end
