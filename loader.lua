@@ -235,7 +235,7 @@ commands[prefix.."reload"] = function(user, msg)
         msg.channel:send("Reload the bot!")
 end
 
-commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
+commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not idk
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
