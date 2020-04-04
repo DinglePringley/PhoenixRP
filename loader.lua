@@ -41,8 +41,9 @@ client:on('ready', function()
 		client._GuildChannel = guild:getChannel("694497682793693264")
 		client._GuildChannel:send("@here Don't forget that the meeting is at 7:30PM Tonight!")
 		break
-        end
-    end
+        	end
+    	end
+end
 end)
 
 client:on('memberJoin', function(member)
