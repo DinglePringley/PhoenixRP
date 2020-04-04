@@ -15,6 +15,7 @@ local commands = {}
 local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
+local Meeting = "Saturday 20:00:00"
 local logs = ""
 
 client:on('ready', function()
@@ -34,6 +35,11 @@ client:on('ready', function()
             client._GuildChannel = guild:getChannel("358712811007770644")
             client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.")
             break
+	
+	if os.data("%A %H:%M:%S") == Meeting then
+		guild = client:getGuild("358709912089657344")
+		client._GuildChannel = guild:getChannel("694497682793693264")
+		client._GuildChannel:send(<@&504289165333102602> " Don't forget that the meeting is at 7:30PM Tonight!")
         end
     end
 end)
@@ -180,24 +186,6 @@ end
 else
     msg.channel:send("Permission denied!")
 end
-end
-
-
-
-
-commands[prefix.."meeting"] = function(user, msg) -- Meeting command
-    print(os.date("%A"))
-		if not msg then return end
-		if not msg.member then return end
-    	if not msg.member:hasRole("361232247065673739") then 
-    	msg.channel:send("You do not have the right permissions to do this request sir!") 
-    	return 
-    	end
-    	if os.date("%A") ~= "Saturday" then
-       	 msg.channel:send("Command must be ran on a saturday sir!") 
-       	 return
-    	end
-    	client._specificChannel:send("@APC Don't forget that the meeting is at 7:30PM Tonight!")
 end
 
 --client:on('memberUpdate', function(member)
