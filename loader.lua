@@ -74,13 +74,16 @@ if func then
  end
     if message.channel.id == "693949445384962143" then
 print(message.content)
-    message.channel:send(message.content);
+    --message.channel:send(message.content);
     message:addReaction(client._emojiTick)
     message:addReaction(client._emojiCross)
 end
 
 end)
 
+client:on('messageCreate', function(message)
+    local cmd, arg = string.match(message.content, '(%S+) (.*)')
+if not cmd then cmd = message.content end
 
 client:on('memberJoin', function(member)
     member:addRole("563037666283880470")
