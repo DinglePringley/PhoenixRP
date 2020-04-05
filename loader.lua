@@ -81,10 +81,6 @@ end
 
 end)
 
-client:on('messageCreate', function(message)
-    local cmd, arg = string.match(message.content, '(%S+) (.*)')
-if not cmd then cmd = message.content end
-
 client:on('memberJoin', function(member)
     member:addRole("563037666283880470")
     member:addRole("504289165333102602")
