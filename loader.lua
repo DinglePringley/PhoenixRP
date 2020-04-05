@@ -279,7 +279,6 @@ commands[prefix.."echo"] = function(user, msg, client) -- Will repeat the words 
 		end
             msg.channel:send {
                 embed = {
-		title = msg.author,
                 description = say,
                 color = discordia.Color.fromRGB(43, 100, 255).value
             }
