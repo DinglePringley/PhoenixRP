@@ -265,7 +265,7 @@ end
 
 commands[prefix.."echo"] = function(user, msg, client) -- Will repeat the words you request it to say
 	if not user then return end
-	if user:hasRole("454732556298879007") then
+    if msg.member:hasPermission(nil, "muteMember") then
 		local content = olib.Explode(" ", msg.content)
 		local say = ""
 		for k, v in pairs(content) do
