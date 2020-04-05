@@ -15,7 +15,7 @@ local commands = {}
 local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
-local Meeting = "Monday 12:10:00"
+local Meeting = "Saturday 01:00:00"
 local logs = ""
 
 client:on('ready', function()
