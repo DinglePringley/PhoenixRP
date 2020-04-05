@@ -72,7 +72,7 @@ if func then
     func(message.member, message, client)
     return
  end
-    if message.channel.id == "693949445384962143" then
+    if message.channel.id == "694497682793693264" then
 print(message.content)
     message.channel:send(message.content);
     message:addReaction(client._emojiTick)
