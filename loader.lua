@@ -213,7 +213,7 @@ end
 --end)
 
 commands[prefix.."invite"] = function(user, msg)
-	user:send("https://discord.gg/A7KcNDB")
+	user:send("Here is the discord invite: https://discord.gg/A7KcNDB")
 end
 
 commands[prefix.."help"] = function(user, msg) -- General help command
