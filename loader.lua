@@ -73,7 +73,7 @@ client:on('messageCreate', function(message)
         return
 	 end
         if message.channel.id == "694497682793693264" then
-	msg.channel:send(message.content)
+    message.channel:send(message.content)
     end
 end)
 
