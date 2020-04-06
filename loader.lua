@@ -216,8 +216,10 @@ commands[prefix.."invite"] = function(user, msg)
 	if not user then return end
     	if msg.member:hasPermission(nil, "muteMembers") then
 	user:send("Here is the discord invite: https://discord.gg/A7KcNDB")
+	end
 	else
 	msg.channel:send("You do not have the right permissions for that one big man!")
+end
 end
 
 commands[prefix.."help"] = function(user, msg) -- General help command
