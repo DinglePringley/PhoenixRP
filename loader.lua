@@ -72,31 +72,6 @@ client:on('messageCreate', function(message)
         func(message.member, message, client)
         return
 	 end
-        if message.channel.id == "694497682793693264" then
-            message.channel:send {
-                embed = {
-                description = message.content,
-                color = discordia.Color.fromRGB(43, 100, 255).value
-            }
-     	}
-		message:delete()
-    end
-end)
-
-
-client:on('messageCreate', function(message)
-	    local cmd, arg = string.match(message.content, '(%S+) (.*)')
-    if not cmd then cmd = message.content end
-
-    local func = commands[string.lower(cmd)]
-    if func then
-        if not message.member then return end
-        if not message then return end
-        if not client then return end
-
-        func(message.member, message, client)
-        return
-	 end
         if message.channel.id == "693949445384962143" then
         message:addReaction(client._emojiTick)
         message:addReaction(client._emojiCross)
