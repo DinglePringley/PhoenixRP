@@ -73,7 +73,13 @@ client:on('messageCreate', function(message)
         return
 	 end
         if message.channel.id == "694497682793693264" then
-    message.channel:send(message.content)
+            msg.channel:send {
+                embed = {
+                description = msg.content,
+                color = discordia.Color.fromRGB(43, 100, 255).value
+            }
+     	}
+		msg:delete()
     end
 end)
 
