@@ -20,7 +20,6 @@ local logs = ""
 
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
-	client:setGame("with the APC Discord")
     while(true)
 	do
         client._PoliceGuild = client:getGuild(policeGuild)
