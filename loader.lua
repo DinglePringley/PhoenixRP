@@ -248,10 +248,15 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 end
 
 commands[prefix.."reload"] = function(user, msg)
+	if not user return end
+	if msg.member:hasPermission(nil, "muteMembers") then
         client:stop()
         client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
         print("reloaded!")
         msg.channel:send("Reload the bot!")
+else
+	msg.channel:send("You do not have permission for that!")
+	end
 end
 
 commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not idk
