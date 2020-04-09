@@ -237,8 +237,8 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 		embed = {
             title = "Admin commands",
             fields = {
-			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>echo <text>", inline = true},
-			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message", inline = true},
+			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>echo <text\n>mute <user> <Time in mins>\n>unmute <user>", inline = true},
+			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message\nWill mute the person you mention\n Will unmute the user mentioned if muted", inline = true},
 
             },
             color = discordia.Color.fromRGB(255, 10, 50).value,
