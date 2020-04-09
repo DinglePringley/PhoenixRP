@@ -22,7 +22,6 @@ client:on('ready', function()
         print('Logged in as '.. client.user.username)
     while(true)
     do
-        client:setGame("with the APC Discord")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
