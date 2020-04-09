@@ -237,7 +237,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 		embed = {
             title = "Admin commands",
             fields = {
-			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>echo <text\n>mute <user> <Time in mins>\n>unmute <user>\n>reload", inline = true},
+			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>repeat <text\n>mute <user> <Time in mins>\n>unmute <user>\n>reload", inline = true},
 			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message\nWill mute the person you mention\n Will unmute the user mentioned if muted\nReloads the bot", inline = true},
 
             },
@@ -288,7 +288,7 @@ commands[prefix.."bots"] = function(user, msg) -- Just alittle credit just used 
     }    
 end
 
-commands[prefix.."echo"] = function(user, msg, client) -- Will repeat the words you request it to say
+commands[prefix.."repeat"] = function(user, msg, client) -- Will repeat the words you request it to say
 	if not user then return end
     if msg.member:hasPermission(nil, "muteMembers") then
 		local content = olib.Explode(" ", msg.content)
