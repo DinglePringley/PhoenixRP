@@ -83,22 +83,22 @@ client:on('memberJoin', function(member)
     member:setNickname("PCSO "..member.username)
 end)
 
-commands[prefix.."game"] = function(user,msg)
-print("running game")
-if user:hasPermission(nil, "muteMembers") then
-    local content = olib.Explode(" ", msg.content)
-    local game = ""
-    for k, v in pairs(content) do
-        if not (k == 1) then
-                game = game.." "..v
-            end
-        end
-        client:setGame(game)
-        msg.channel:send("Setting game to:"..game)
-    else
-        msg.channel:send("You do not have permission for that")
-    end
-end
+--commands[prefix.."game"] = function(user,msg)
+--print("running game")
+--if user:hasPermission(nil, "muteMembers") then
+--    local content = olib.Explode(" ", msg.content)
+--    local game = ""
+ --   for k, v in pairs(content) do
+  --      if not (k == 1) then
+    --            game = game.." "..v
+      --      end
+      --  end
+      --  client:setGame(game)
+      --  msg.channel:send("Setting game to:"..game)
+  --  else
+   --     msg.channel:send("You do not have permission for that")
+  --  end
+--end
 
     commands[prefix.."ban"] = function(user, msg)
     print("Running ban function")
