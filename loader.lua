@@ -223,9 +223,19 @@ end
 
 commands[prefix.."help"] = function(user, msg) -- General help command
 	print("Anthony stinks")
+		 msg.channel:send{
+             embed = {
+            title = "General Commands",
+            fields = {
+            {name = "Commands", value = ">Credit\n>bots\info", inline = true},
+			{name = "Uses", value = "Will show you all the people who helped make me\nAll the bots int the APC\n Give you relative links", inline = true},
+            },
+            color = discordia.Color.fromRGB(9, 194, 219).value,
+        }
+    }
    		msg.channel:send{
-			 embed = {
-            title = "General commands",
+		embed = {
+            title = "Admin commands",
             fields = {
 			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>echo <text>", inline = true},
 			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message", inline = true},
@@ -233,7 +243,8 @@ commands[prefix.."help"] = function(user, msg) -- General help command
             },
             color = discordia.Color.fromRGB(255, 10, 50).value,
         }
-    }    
+    }   
+	
 end
 
 commands[prefix.."reload"] = function(user, msg)
