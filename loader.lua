@@ -227,8 +227,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 			 embed = {
             title = "General commands",
             fields = {
-                {name = "", value = "<@!634273754150731776>"},
-                {name = "Testers!", value = "<@!528362905108742154>, <@!407653534067195934>, <@!249679264729792512>"}
+                {name = "Prefix:\nkick (user) (Reason)\n", value = ">\n Kicks targeted user"}
             },
             color = discordia.Color.fromRGB(255, 10, 50).value,
         }
