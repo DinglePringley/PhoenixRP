@@ -227,7 +227,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 			 embed = {
             title = "General commands",
             fields = {
-			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>/n>echo <text>", inline = true},
+			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason> /n>echo <text>", inline = true},
 			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message", inline = true},
 
             },
