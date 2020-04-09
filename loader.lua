@@ -84,7 +84,7 @@ client:on('memberJoin', function(member)
     member:setNickname("PCSO "..member.username)
 end)
 
-    commands[prefix.."Ban"] = function(user, msg)
+    commands[prefix.."ban"] = function(user, msg)
     print("Running ban function")
     if not user then return end
     print("test")
