@@ -15,7 +15,7 @@ local commands = {}
 local targets = {}
 local cooldown = {}
 local MinuteWarning = "Thursday 11:00:00"
-local Meeting = "Saturday 01:00:00"
+local Meeting = "Saturday 11:00:00"
 local logs = ""
 
 client:on('ready', function()
@@ -39,7 +39,7 @@ client:on('ready', function()
 	if os.data("%A %H:%M:%S") == Meeting then
 		guild = client:getGuild("358709912089657344")
 		client._GuildChannel = guild:getChannel("694497682793693264")
-		client._GuildChannel:send("@here Don't forget that the meeting is at 7:30PM Tonight!")
+		client._GuildChannel:send("<@&504289165333102602> Don't forget that the meeting is at 7:30PM Tonight!")
 		break
         	end
     	end
