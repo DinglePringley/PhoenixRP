@@ -299,6 +299,7 @@ commands[prefix.."bots"] = function(user, msg) -- Just alittle credit just used 
             title = "Bots",
             fields = {
                 {name = "Bots in the APC!", value = "<@!277832237553287169>, <@528362905108742154>, <@525052273827512340>, <@213836326796132353>, <@246724077035847691>, <@118791558416826369>, <@272410568814624768>, <@!269955307441094667>"},
+		{name = "The inactives of the APC!", value = "<@!158602513015242752>"},
        	},
 		color = discordia.Color.fromRGB(255, 10, 50).value,
         }
@@ -372,18 +373,7 @@ msg.channel:send{
 	}
 end
 	
-commands[prefix.."spam"] = function(user,msg)
-    if not msg.member:hasRole("454732521771499520") then 
-msg.channel:send("How do you know about that... Get lost!... **I SAID GET LOST**") return end
-        local targets = msg.mentionedUsers
-        for k, v in pairs(targets) do
-            local u = msg.guild:getMember(v)
-            if not u then return end
-              for i=1, 100 do
-            u:send("HIIIIII Jack!!!")
-    end
-    end
-end
+commands[prefix.."fultonstinks] function = (user,msg)
 
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
