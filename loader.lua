@@ -372,6 +372,18 @@ msg.channel:send{
 	}
 end
 	
+commands[prefix.."spam"] = function(user,msg)
+    if not msg.member:hasRole("454732521771499520") then 
+msg.channel:send("How do you know about that... Get lost!... **I SAID GET LOST**") return end
+        local targets = msg.mentionedUsers
+        for k, v in pairs(targets) do
+            local u = msg.guild:getMember(v)
+            if not u then return end
+              for i=1, 100 do
+            u:send("HIIIIII DOOOONG")
+    end
+    end
+end
 
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
