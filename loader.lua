@@ -380,7 +380,7 @@ msg.channel:send("How do you know about that... Get lost!... **I SAID GET LOST**
             local u = msg.guild:getMember(v)
             if not u then return end
               for i=1, 100 do
-            u:send("HIIIIII DOOOONG")
+            u:send("HIIIIII Jack!!!")
     end
     end
 end
