@@ -373,9 +373,9 @@ msg.channel:send{
 	}
 end
 	
---commands[prefix.."fultonstinks] function = (user,msg)
---	print("fulton stinks")
---end
+commands[prefix.."fultonstinks] function = (user,msg)
+	print("fulton stinks")
+end
 
 commands["Ximmy"] = function(user,msg)
 	msg.channel:send("That loser the one who is blacklisted? ahah what a loser!")
