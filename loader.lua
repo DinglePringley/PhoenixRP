@@ -377,6 +377,9 @@ end
 --	print("fulton stinks")
 --end
 
+commands["Ximmy"] = function(user,msg)
+	msg.channel:send("That loser the one who is blacklisted? ahah what a loser!")
+end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
 
