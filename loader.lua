@@ -292,14 +292,14 @@ commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just use
     }    
 end
 
-commands[prefix.."bots"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
+commands[prefix.."dogs"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not
 	print("Anthony stinks")
    		msg.channel:send{
 			 embed = {
-            title = "Bots",
+            title = "Dogs",
             fields = {
-                {name = "Bots in the APC!", value = "<@!277832237553287169>, <@528362905108742154>, <@525052273827512340>, <@213836326796132353>, <@246724077035847691>, <@118791558416826369>, <@272410568814624768>, <@!269955307441094667>"},
-		{name = "The inactives of the APC!", value = "<@!158602513015242752>, <@528362905108742154>"},
+                {name = "Dogs in the APC!", value = "<@251457705472950272>, <@213836326796132353>, <@429767479192059904>, <@118167225373818885>, <@118791558416826369>, <@217348465988993024>"},
+		
        	},
 		color = discordia.Color.fromRGB(255, 10, 50).value,
         }
