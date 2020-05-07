@@ -367,7 +367,7 @@ commands[prefix.."info"] = function(user,msg)
 	print("Running info command")
 msg.channel:send{
 		embed = {
-		description = "Here is the relevant links you need:\n APC Wiki: https://wiki.phoenixrp.co.uk/index.php/APC_Handbook \n Public Roster: https://pnc.phoenixrp.co.uk/dash/roster/apc/ \n Enforcement guide: https://docs.google.com/spreadsheets/d/1FMzqCZt18r1W94ghH93j1bZaEL4eBGmk2l7G9UYUAJ8/edit#gid=1169698448\n \n If I have missed anything out message <@!634273754150731776>",
+		description = "Here is the relevant links you need:\n Phoenix Wiki: https://wiki.phoenixrp.co.uk/index.php/Main_Page \n APC Handbook: https://wiki.phoenixrp.co.uk/index.php/APC_Handbook \n Public Roster: https://pnc.phoenixrp.co.uk/dash/roster/apc/ \n Enforcement guide: https://docs.google.com/spreadsheets/d/1FMzqCZt18r1W94ghH93j1bZaEL4eBGmk2l7G9UYUAJ8/edit#gid=1169698448\n \n If I have missed anything out message <@!634273754150731776>",
 		color = discordia.Color.fromRGB(175, 167, 94).value
 		}
 	}
