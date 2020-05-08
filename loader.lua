@@ -254,7 +254,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 		embed = {
             title = "Admin commands",
             fields = {
-			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>repeat <text\n>mute <user> <Time in mins>\n>unmute <user>\n>reload\nrepeat<Msg>", inline = true},
+			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>repeat <text\n>mute <user> <Time in mins>\n>unmute <user>\n>reload\n>repeat<Msg>", inline = true},
 			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message\nWill mute the person you mention\n Will unmute the user mentioned if muted\nReloads the bot\n Will repeat what you ask it to repeat", inline = true},
 
             },
