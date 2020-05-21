@@ -385,7 +385,7 @@ commands[prefix.."trainee"] = function(user, msg)
             local u = msg.guild:getMember(v)
             if not u then return end
             u:addRole("711287652103749694")
-            msg.channel:send("Assinging "..v.mentionString.."Roles")
+            msg.channel:send("Assinging "..v.mentionString.." Roles")
 	client._logChannel:send{
 			embed = {
 				description = u.mentionString.. "Was assigned <@&711287652103749694>",
@@ -407,7 +407,7 @@ commands[prefix.."tremove"] = function(user, msg)
     local u = msg.guild:getMember(v)
     if not u then return end
     u:removeRole("711287652103749694")
-    msg.channel:send("Removed "..v.mentionString.."Trainee Tag!")
+    msg.channel:send("Removed "..v.mentionString.." Trainee Tag!")
     client._logChannel:send{
         embed = {
             description = u.mentionString.. " Was removed from <@&711287652103749694>",
