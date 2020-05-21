@@ -388,7 +388,7 @@ commands[prefix.."trainee"] = function(user, msg)
             msg.channel:send("Assinging "..v.mentionString.."Roles")
 	client._logChannel:send{
 			embed = {
-				description = u.mentionString.. "Was assigned <@711287652103749694>",
+				description = u.mentionString.. "Was assigned <@&711287652103749694>",
 				color = discordia.Color.fromRGB(100,255,52).value
 					}
 				}
@@ -398,6 +398,27 @@ commands[prefix.."trainee"] = function(user, msg)
     end
 end
 
+commands[prefix.."tremove"] = function(user, msg)
+ if not user then return end
+    if msg.member:hasPermission(nil, "kickMembers") then
+    local targets = msg.mentionedUsers
+    if not targets[1] then msg.channel:send("Please @ a user to remove their tag!") return end
+    for k, v in pairs(targets) do
+    local u = msg.guild:getMember(v)
+    if not u then return end
+    u:removeRole("711287652103749694")
+    msg.channel:send("Removed "..v.mentionString.."Trainee Tag!")
+    client._logChannel:send{
+        embed = {
+            description = u.mentionString.. " Was removed from <@&711287652103749694>",
+            color = discordia.Color.fromRGB(102,255,101).value
+        }
+    }
+end
+else
+    msg.channel:send("Permission denied!")
+end
+end
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
 
