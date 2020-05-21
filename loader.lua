@@ -388,7 +388,7 @@ commands[prefix.."trainee"] = function(user, msg)
             msg.channel:send("Assinging "..v.mentionString.." Roles")
 	client._logChannel:send{
 			embed = {
-				description = u.mentionString.. "Was assigned <@&711287652103749694>",
+				description = u.mentionString.. " Was assigned <@&711287652103749694>",
 				color = discordia.Color.fromRGB(100,255,52).value
 					}
 				}
