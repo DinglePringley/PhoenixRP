@@ -396,7 +396,7 @@ commands[prefix.."trainee"] = function(user, msg)
     else
         msg.channel:send("You do not have permission to do that sir!")
     end
-
+end
 
 
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
