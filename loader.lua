@@ -372,7 +372,34 @@ msg.channel:send{
 		}
 	}
 end
-	
+
+commands[prefix.."trainee"] = function(user, msg) 	
+	if not user then return end
+	if msg.member:hasPermission(nil, "kickMembers") then
+		  print("Permission granted")
+        local content = olib.Explode(" ", msg.content)
+		local say = ""
+		local targets = msg.mentionedUsers
+		if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to assign the role too!") return end
+		for k, v in pairs(targets) do
+    for k, v in pairs(targets) do
+            local u = msg.guild:getMember(v)
+            if not u then return end
+            u:addRole("711287652103749694")
+            msg.channel:send("Assinging "..v.mentionString.."Roles")
+	client._logChannel:send{
+			embed = {
+				description = u.mentionString.. "Was assigned <@711287652103749694>",
+				color = discordia.Color.fromRGB(100,255,52).value
+					}
+				}
+        end
+    else
+        msg.channel:send("You do not have permission to do that sir!")
+    end
+end
+
+
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
 
 
