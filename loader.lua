@@ -381,7 +381,6 @@ commands[prefix.."trainee"] = function(user, msg)
 		local say = ""
 		local targets = msg.mentionedUsers
 		if not targets[1] then msg.channel:send("Please @ atleast 1 person you want to assign the role too!") return end
-		for k, v in pairs(targets) do
     for k, v in pairs(targets) do
             local u = msg.guild:getMember(v)
             if not u then return end
