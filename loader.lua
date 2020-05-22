@@ -153,7 +153,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 			client._logChannel:send{
 					embed = {
 						description = u.mentionString.. "has been muted!",
-						color = discordia.Color.fromRGB(255,100,52).value
+						color = discordia.Color.fromRGB(100,27,0).value
 							}
 						}
 		
@@ -166,7 +166,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 				    client._logChannel:send{
 							embed = {
 								description = u.mentionString.. " has been unmuted after waiting the timer.",
-								color = discordia.Color.fromRGB(102,255,102).value
+								color = discordia.Color.fromRGB(0,128,0).value
 							}
 						}			
 				    end)()
@@ -178,8 +178,6 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 	end
 
 commands[prefix.."unmute"] = function(user,msg)
-    local color = discordia.Color.fromRGB(102,255,102).value
-    print(color)
     if not user then return end
     if msg.member:hasPermission(nil, "kickMembers") then
     local targets = msg.mentionedUsers
@@ -193,7 +191,7 @@ commands[prefix.."unmute"] = function(user,msg)
     client._logChannel:send{
         embed = {
             description = u.mentionString.. " has been unmuted!",
-            color = discordia.Color.fromRGB(102,255,101).value
+            color = discordia.Color.fromRGB(0,128,0).value
         }
     }
 end
@@ -247,7 +245,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
             {name = "Commands", value = ">Credit\n>dogs\n>info", inline = true},
 		{name = "Uses", value = "Will show you all the people who helped make me\nAll the dogs int the APC\n Give you relative links", inline = true},
             },
-            color = discordia.Color.fromRGB(219, 192, 82).value,
+            color = discordia.Color.fromRGB(0, 71, 171).value,
         }
     }
    		msg.channel:send{
@@ -258,7 +256,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message\nWill mute the person you mention\n Will unmute the user mentioned if muted\nReloads the bot", inline = true},
 
             },
-            color = discordia.Color.fromRGB(255, 10, 50).value,
+            color = discordia.Color.fromRGB(0,128,0).value,
         }
     }   
 	
