@@ -38,7 +38,7 @@ client:on('ready', function()
 	
 	if os.data("%A %H:%M:%S") == Meeting then
 		guild = client:getGuild("358709912089657344")
-		client._GuildChannel = guild:getChannel("694497682793693264")
+		client._GuildChannel = guild:getChannel("358712811007770644")
 		client._GuildChannel:send("<@&504289165333102602> Don't forget that the meeting is at 7:30PM Tonight!")
 		break
         	end
