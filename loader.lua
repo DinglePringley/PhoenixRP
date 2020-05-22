@@ -420,6 +420,21 @@ else
 end
 end
 
+
+commands[prefix.."ranks"] = function(user,msg)
+msg.channel:send{
+	embed = {
+            title = "Admin commands",
+            fields = {
+			{name = "Ranks", value = "Police Commissioner\nPolice Deputy Commissioner\nPolice Assistant Commissioner\nChief Superintendent\nSuperintendent\nChief Inspector\nInspector\nSergeant\nSenior Police Constable\nPolice Constable\nProbationary Police Constable\n Police Community Support Officer", inline = true},
+            },
+            color = discordia.Color.fromRGB(255, 10, 50).value,
+        }
+    }   
+	
+end
+
+
 client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
 
 
