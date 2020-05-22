@@ -46,6 +46,24 @@ client:on('ready', function()
 end
 end)
 
+client:on('ready', function()
+     while(true)
+     do
+        if os.date("%M:%S") == "30:00" then
+            client:stop()
+            client:run("Bot TOKEN_HERE")
+            print("The bot is restarting to clear cache.")
+            break
+        end
+        if os.date("%M:%S") == "59:59" then
+            client:stop()
+            client:run("Bot TOKEN_HERE")
+            print("The bot is restarting to clear cache.")
+            break
+         end
+    end
+end)
+
 client:on('memberJoin', function(member)
     guild = client:getGuild(policeGuild)
     joinLeave = guild:getChannel("453672836645650435")
