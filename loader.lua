@@ -152,7 +152,7 @@ commands[prefix.."mute"] = function(user, msg) -- Will be able to mute people wh
 			msg.channel:send("Muted "..u.mentionString.." for "..usertime.. " minute(s)!")
 			client._logChannel:send{
 					embed = {
-						description = u.mentionString.. "has been mute by "..msg.member.." !",
+						description = u.mentionString.. "has been muted!",
 						color = discordia.Color.fromRGB(255,100,52).value
 							}
 						}
