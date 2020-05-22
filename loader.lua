@@ -21,34 +21,28 @@ local logs = ""
 client:on('ready', function()
         print('Logged in as '.. client.user.username)
     while(true)
-	do
-	client:setGame("with APC discord!")
+    do
+    client:setGame("with APC discord!")
         client._PoliceGuild = client:getGuild(policeGuild)
         client._emojiTick = client._PoliceGuild:getEmoji("694218209217347615")
         client._emojiCross = client._PoliceGuild:getEmoji("694219068491825202")
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
         client._joinChannel = client._PoliceGuild:getChannel("694497682793693264")
-	client._logChannel = client._PoliceGuild:getChannel("544986930987925505")
+    client._logChannel = client._PoliceGuild:getChannel("544986930987925505")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
             client._GuildChannel = guild:getChannel("358712811007770644")
             client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.")
             break
-	
-	if os.data("%A %H:%M:%S") == Meeting then
-		guild = client:getGuild("358709912089657344")
-		client._GuildChannel = guild:getChannel("358712811007770644")
-		client._GuildChannel:send("<@&504289165333102602> Don't forget that the meeting is at 7:30PM Tonight!")
-		break
-        	end
-    	end
-end
-end)
-
-client:on('ready', function()
-     while(true)
-     do
+    
+    if os.data("%A %H:%M:%S") == Meeting then
+        guild = client:getGuild("358709912089657344")
+        client._GuildChannel = guild:getChannel("358712811007770644")
+        client._GuildChannel:send("<@&504289165333102602> Don't forget that the meeting is at 7:30PM Tonight!")
+        break
+            end
+        end
         if os.date("%M:%S") == "30:00" then
             client:stop()
             client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
@@ -61,7 +55,7 @@ client:on('ready', function()
             print("The bot is restarting to clear cache.")
             break
          end
-    end
+end
 end)
 
 client:on('memberJoin', function(member)
