@@ -51,13 +51,13 @@ client:on('ready', function()
      do
         if os.date("%M:%S") == "30:00" then
             client:stop()
-            client:run("Bot TOKEN_HERE")
+            client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
             print("The bot is restarting to clear cache.")
             break
         end
         if os.date("%M:%S") == "59:59" then
             client:stop()
-            client:run("Bot TOKEN_HERE")
+            client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
             print("The bot is restarting to clear cache.")
             break
          end
