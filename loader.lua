@@ -424,11 +424,11 @@ end
 commands[prefix.."ranks"] = function(user,msg)
 msg.channel:send{
 	embed = {
-            title = "Admin commands",
+            title = "APC Ranks",
             fields = {
 			{name = "Ranks", value = "Police Commissioner\nPolice Deputy Commissioner\nPolice Assistant Commissioner\nChief Superintendent\nSuperintendent\nChief Inspector\nInspector\nSergeant\nSenior Police Constable\nPolice Constable\nProbationary Police Constable\n Police Community Support Officer", inline = true},
             },
-            color = discordia.Color.fromRGB(255, 10, 50).value,
+            color = discordia.Color.fromRGB(0, 71, 171).value,
         }
     }   
 	
