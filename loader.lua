@@ -263,11 +263,22 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 		embed = {
             title = "Admin commands",
             fields = {
-			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>repeat <text>\n>mute <user> <Time in mins>\n>unmute <user>\n>reload", inline = true},
-			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nRepeats you and removes your message\nWill mute the person you mention\n Will unmute the user mentioned if muted\nReloads the bot", inline = true},
+			{name = "Commands", value = ">kick <users> <Reason>\n>ban <users> <Reason>\n>mute <user> <Time in mins>\n>unmute <user>\n>reload", inline = true},
+			{name = "Uses", value = "Kicks all mentioned users\nBans all mentioned users\nWill mute the person you mention\n Will unmute the user mentioned if muted\nReloads the bot", inline = true},
 
             },
             color = discordia.Color.fromRGB(0,128,0).value,
+        }
+    }   
+   		msg.channel:send{
+		embed = {
+            title = "Unit lead commands",
+            fields = {
+			{name = "Commands", value = ">trainee <users> \n>tremove\n>repeat <text>", inline = true},
+			{name = "Uses", value = "Gives them the NPAS trainee role\nRemoves the NPAS trainee role\nRepeats you and removes your message", inline = true},
+
+            },
+            color = discordia.Color.fromRGB(128,0,0).value,
         }
     }   
 	
