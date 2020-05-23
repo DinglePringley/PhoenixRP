@@ -253,6 +253,7 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 		 msg.channel:send{
              embed = {
             title = "General Commands",
+	   thumbnail = {url = msg.member.user.avatarURL},
             fields = {
             {name = "Commands", value = ">Credit\n>dogs\n>info", inline = true},
 		{name = "Uses", value = "Will show you all the people who helped make me\nAll the dogs int the APC\n Give you relative links", inline = true},
