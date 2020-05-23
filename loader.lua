@@ -253,8 +253,8 @@ commands[prefix.."help"] = function(user, msg) -- General help command
              embed = {
             title = "General Commands",
             fields = {
-            {name = "Commands", value = ">Credit\n>dogs\n>info", inline = true},
-		{name = "Uses", value = "Will show you all the people who helped make me\nAll the dogs int the APC\n Give you relative links", inline = true},
+            {name = "Commands", value = ">Credit\n>dogs\n>info\n>ranks", inline = true},
+		{name = "Uses", value = "Will show you all the people who helped make me\nAll the dogs int the APC\n Give you relative links\nWill give you the ranks in the APC", inline = true},
             },
             color = discordia.Color.fromRGB(0, 71, 171).value,
         }
