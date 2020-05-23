@@ -35,14 +35,13 @@ client:on('ready', function()
             client._GuildChannel = guild:getChannel("358712811007770644")
             client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.")
             break
-    
+     end
     if os.data("%A %H:%M:%S") == Meeting then
         guild = client:getGuild("358709912089657344")
         client._GuildChannel = guild:getChannel("358712811007770644")
         client._GuildChannel:send("<@&504289165333102602> Don't forget that the meeting is at 7:30PM Tonight!")
         break
             end
-        end
         if os.date("%M:%S") == "30:00" then
             client:stop()
             client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
