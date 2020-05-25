@@ -42,12 +42,12 @@ client:on('ready', function()
         client._GuildChannel:send("<@&504289165333102602> Don't forget that the meeting is at 7:30PM Tonight!")
         break
             end
-        if os.date("%M:%S") == "30:00" then
-            client:stop()
-            client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
-            print("The bot is restarting to clear cache.")
-            break
-        end
+      --  if os.date("%M:%S") == "30:00" then
+      --      client:stop()
+      --      client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
+      --      print("The bot is restarting to clear cache.")
+      --      break
+      --  end
         if os.date("%M:%S") == "59:59" then
             client:stop()
             client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
