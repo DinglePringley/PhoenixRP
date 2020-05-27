@@ -36,13 +36,6 @@ client:on('ready', function()
             client._GuildChannel:send("The APC Meeting is on Saturdays at 19:30PM British Time! Important announcements and changes are disclosed during the meeting. If you can not make the meeting read the meeting notes posted after the meeting.")
             break
      end
-
-        if os.date("%M:%S") == "59:00" then
-            client:stop()
-            client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
-            print("The bot is restarting to clear cache.")
-            break
-         end
 end
 end)
 
