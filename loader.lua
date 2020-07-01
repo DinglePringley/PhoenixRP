@@ -422,6 +422,6 @@ msg.channel:send{
 end
 
 
-client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XvEtOg.6I54WkUwiB3Rjtrp7GDMiwzLQ_4")
+client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.Xvv__w.QPnxHQxXu89yQv_3V01zv8PrK_I")
 
 
