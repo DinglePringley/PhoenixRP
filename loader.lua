@@ -46,7 +46,7 @@ end)
 
 client:on('memberLeave', function(member)
     guild = client:getGuild(policeGuild)
-    joinLeave = guild:getChannel("694497682793693264")
+    joinLeave = guild:getChannel("453672836645650435")
     joinLeave:send(member.username .. '#' .. member.discriminator .. ' just left the discord :slight_frown:\n\nThank you for your service o7')
     print(member.username)
 end)
