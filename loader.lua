@@ -319,6 +319,46 @@ commands[prefix.."repeat"] = function(user, msg, client) -- Will repeat the word
 	end
 end
 
+commands[prefix.."suggestion"] = function(user, msg, channel)
+    print("I always print here as its cool")
+    guild = client:getGuild(policeGuild)
+    logs = guild:getChannel("544986930987925505")
+    sug = guild:getChannel("693949445384962143")
+        local content = msg.content
+        local args = content:split(" ")
+        local say = ""
+        for k, v in pairs(args) do
+            if not (k == 1) then
+                say = say.." "..v
+            end
+        end 
+        if say == "" then
+            msg.channel:send("Please provide a suggestion!")
+            return
+        end
+         sug:send{
+             embed = {
+            title = "Suggestion by "..user.username,
+            fields = {
+            {name = "Suggestion", value = say , inline = true},
+            },
+            color = discordia.Color.fromRGB(0, 71, 171).value,
+        }
+    }
+    msg:delete()
+    print("lmfao")
+        logs:send{
+            embed = {
+            title = "Suggestion created by "..user.username,
+            fields = {
+            {name = user.username.." Has created a suggestion with the contents:", value = say , inline = true},
+            },
+            color = discordia.Color.fromRGB(0,200,0).value
+            }
+        }
+end
+
+
 
     commands[prefix.."kick"] = function(user, msg) -- General kick function
     print("Running kick function")
