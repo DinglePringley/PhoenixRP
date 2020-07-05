@@ -401,7 +401,8 @@ msg.channel:send{
 end
 
 commands[prefix.."trainee"] = function(user, msg)
-if not (channel.id == "643781397240348672") then return end
+ if not user then return end
+    if msg.member:hasRole("500015595228626954") then
 		  print("Permission granted")
         local content = olib.Explode(" ", msg.content)
 		local say = ""
@@ -426,7 +427,7 @@ end
 
 commands[prefix.."tremove"] = function(user, msg)
  if not user then return end
-    if msg.member:hasPermission(nil, "kickMembers") then
+    if msg.member:hasRole("500015595228626954") then
     local targets = msg.mentionedUsers
     if not targets[1] then msg.channel:send("Please @ a user to remove their tag!") return end
     for k, v in pairs(targets) do
