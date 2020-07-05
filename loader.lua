@@ -400,9 +400,8 @@ msg.channel:send{
 	}
 end
 
-commands[prefix.."trainee"] = function(user, msg) 	
-	if not user then return end
-	if msg.member:hasPermission(nil, "kickMembers") then
+commands[prefix.."trainee"] = function(user, msg)
+if not (channel.id == "643781397240348672") then return end
 		  print("Permission granted")
         local content = olib.Explode(" ", msg.content)
 		local say = ""
