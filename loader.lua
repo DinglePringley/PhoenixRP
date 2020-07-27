@@ -81,6 +81,7 @@ client:on('messageCreate', function(message, user)
     if user == client.user then return end
     if user.bot then return end
     if not message.member then return end
+	print("this works")
    guild = client:getGuild("703815580993454180")
     logs = guild:getChannel("737145506354036816")
     logs:send{
