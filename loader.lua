@@ -28,6 +28,7 @@ client:on('ready', function()
         client._specificChannel = client._PoliceGuild:getChannel("358712811007770644")
         client._joinChannel = client._PoliceGuild:getChannel("694497682793693264")
     client._logChannel = client._PoliceGuild:getChannel("544986930987925505")
+	print("This is to keep the bot active")
         
         if os.date("%A %H:%M:%S") == MinuteWarning then
             guild = client:getGuild("358709912089657344")
