@@ -76,6 +76,24 @@ client:on('memberJoin', function(member)
     member:setNickname("PCSO "..member.username)
 end)
 
+client:on('messageCreate', function(message, user)
+    local user = message.author
+    if user == client.user then return end
+    if user.bot then return end
+    if not message.member then return end
+   guild = client:getGuild("703815580993454180")
+    logs = guild:getChannel("737145506354036816")
+    logs:send{
+        embed = {
+            title = "Message created",
+            fields = {
+            {name = "A message was created with the content:", value = message.content.." **by:** "..message.member.mentionString , inline = true},
+         },
+            color = discordia.Color.fromRGB(0,200,0).value
+         }
+     }
+end)
+
 --commands[prefix.."game"] = function(user,msg)
 --print("running game")
 --if user:hasPermission(nil, "muteMembers") then
