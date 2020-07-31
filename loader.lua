@@ -284,34 +284,6 @@ commands[prefix.."help"] = function(user, msg) -- General help command
 	
 end
 
-commands[prefix.."reload"] = function(user, msg)
-	if not user then return end
-	if msg.member:hasPermission(nil, "muteMembers") then
-        client:stop()
-        client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.XoSc_g.Tdvjc5_b8ggpcXUsTitX10wAJOE")
-        print("reloaded!")
-        msg.channel:send("Reload the bot!")
-else
-	msg.channel:send("You do not have permission for that!")
-	end
-end
-
-commands[prefix.."credit"] = function(user, msg) -- Just alittle credit just used to test if the bot is broken or not idk
-	print("Anthony stinks")
-   		msg.channel:send{
-			 embed = {
-            title = "Credit",
-            fields = {
-		{name = "Developers!", value = "<@!634273754150731776>"},
-                {name = "Testers!", value = "<@!528362905108742154>, <@!407653534067195934>, <@!249679264729792512>, <@325278718937530368>"},
-		{name = "Top Fraggers!", value = "<@!301048048455516161>, <@!125267832404574208>, <@!228241645378732033>"}
-             
-          },  
-            color = discordia.Color.fromRGB(255, 10, 50).value,
-        }
-    }    
-end
-
 commands[prefix.."repeat"] = function(user, msg, client) -- Will repeat the words you request it to say
 	if not user then return end
     if msg.member:hasPermission(nil, "muteMembers") then
@@ -409,16 +381,6 @@ end
     end
 end
 
-commands[prefix.."info"] = function(user,msg)
-	print("Running info command")
-msg.channel:send{
-		embed = {
-		description = "Here is the relevant links you need:\n Phoenix Wiki: https://wiki.phoenixrp.co.uk/index.php/Main_Page \n APC Handbook: https://wiki.phoenixrp.co.uk/index.php/APC_Handbook \n Public Roster: https://pnc.phoenixrp.co.uk/dash/roster/apc/ \n Enforcement guide: https://docs.google.com/spreadsheets/d/1FMzqCZt18r1W94ghH93j1bZaEL4eBGmk2l7G9UYUAJ8/edit#gid=1169698448\n \n If I have missed anything out message <@!634273754150731776>",
-		color = discordia.Color.fromRGB(175, 167, 94).value
-		}
-	}
-end
-
 commands[prefix.."trainee"] = function(user, msg)
  if not user then return end
     if msg.member:hasRole("500015595228626954") then
@@ -464,20 +426,6 @@ end
 else
     msg.channel:send("Permission denied!")
 end
-end
-
-
-commands[prefix.."ranks"] = function(user,msg)
-msg.channel:send{
-	embed = {
-            title = "APC Ranks",
-            fields = {
-			{name = "Ranks", value = "Police Commissioner\nPolice Deputy Commissioner\nPolice Assistant Commissioner\nChief Superintendent\nSuperintendent\nChief Inspector\nInspector\nSergeant\nSenior Police Constable\nPolice Constable\nProbationary Police Constable\n Police Community Support Officer", inline = true},
-            },
-            color = discordia.Color.fromRGB(0, 71, 171).value,
-        }
-    }   
-	
 end
 
 
