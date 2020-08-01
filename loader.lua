@@ -76,8 +76,9 @@ client:on('memberJoin', function(member)
     member:setNickname("PCSO "..member.username)
 end)
 
-client:on('messageCreate', function(message, user)
+client:on('messageCreate', function(message,user,channel)
     local user = message.author
+    local author = message.author
     if user == client.user then return end
     if user.bot then return end
     if not message.member then return end
@@ -86,10 +87,14 @@ client:on('messageCreate', function(message, user)
     logs:send{
         embed = {
             title = "Message created",
+            author = {
+                name = author.username,
+                icon_url = author.avatarURL
+            },
             fields = {
-            {name = "A message was created with the content:", value = message.content.." **by:** "..message.member.mentionString , inline = true},
+            {name = "A message was created with the content:", value = message.content.." **by:** "..message.member.mentionString.. " **in** " ..message.channel.mentionString, inline = true},
          },
-            color = discordia.Color.fromRGB(0,200,0).value
+            color = discordia.Color.fromRGB(0,255,0).value
          }
      }
 end)
