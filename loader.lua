@@ -402,7 +402,7 @@ end
 
 commands[prefix.."tremove"] = function(user, msg)
  if not user then return end
-    if msg.member:hasRole("500015595228626954") then
+    if msg.member:hasRole("500015595228626954") or msg.member:hasRole("361232247065673739") then
     local targets = msg.mentionedUsers
     if not targets[1] then msg.channel:send("Please @ a user to remove their tag!") return end
     for k, v in pairs(targets) do
