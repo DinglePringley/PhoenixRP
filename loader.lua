@@ -377,7 +377,7 @@ end
 
 commands[prefix.."trainee"] = function(user, msg)
  if not user then return end
-    if msg.member:hasRole("500015595228626954") then
+    if msg.member:hasRole("500015595228626954") or msg.memeber:hasRole("361232247065673739") then
 		  print("Permission granted")
         local content = olib.Explode(" ", msg.content)
 		local say = ""
