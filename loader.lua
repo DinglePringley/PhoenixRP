@@ -425,6 +425,6 @@ end
 end
 
 
-client:run("Bot NjkzODcxOTc5NDcxNTY4OTY4.Xvv__w.QPnxHQxXu89yQv_3V01zv8PrK_I")
+client:run("Bot Token Here")
 
 
